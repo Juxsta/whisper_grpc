@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+service Whisper {
+    rpc LocalTranscribe (LocalTranscribeRequest) returns (LocalTranscribeResponse) {}
+}
+// set enum for model of local transcribe request: tiny.en 
+
+message LocalTranscribeRequest {
+    string path = 1;
+    Model model = 2;
+}
+
+message LocalTranscribeResponse {
+    string text = 1;
+}
+
+enum Model {
+    TINY = 0;
+    BASE = 1;
+    SMALL = 2;
+    MEDIUM = 3;
+    LARGE = 4;
+    TINY_EN = 5;
+    BASE_EN = 6;
+    SMALL_EN = 7;
+    MEDIUM_EN = 8;
+  }
