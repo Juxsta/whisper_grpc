@@ -12,17 +12,15 @@ def transcribe_file(file, model, verbose):
         return
     file_type = magic.from_file(file, mime=True)
     if file_type.startswith('audio/') or file_type.startswith('video/'):
-        input_file = file
-        output_path = Path(input_file).with_suffix('.en.srt')
-        logging.info(f'Transcribing {input_file}')
+        logging.info(f'Transcribing {file}')
         with tempfile.TemporaryDirectory() as tmpdir:
             try:
-                output_file = str(Path(tmpdir) / 'audio.wav')
-                transcribe_audio_file(input_file, output_file)
+                output_file = str(Path(tmpdir) / os.path.basename(file).with_suffix('.wav'))
+                transcribe_audio_file(file, output_file)
                 result = whisper.transcribe(
                     model, output_file, beam_size=5, best_of=5, verbose=verbose, language="en")
             except ffmpeg.Error as e:
-                logging.error(f'No English audio track found in {input_file}, error: {e.stderr}')
+                logging.error(f'No English audio track found in {file}, error: {e.stderr}')
                 return
         save_results(result, output_path)
     else:

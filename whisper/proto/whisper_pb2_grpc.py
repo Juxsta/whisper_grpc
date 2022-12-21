@@ -14,17 +14,17 @@ class WhisperStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.LocalTranscribe = channel.unary_unary(
-                '/Whisper/LocalTranscribe',
-                request_serializer=whisper__pb2.LocalTranscribeRequest.SerializeToString,
-                response_deserializer=whisper__pb2.LocalTranscribeResponse.FromString,
+        self.LocalTranscribeAnimeDub = channel.unary_unary(
+                '/Whisper/LocalTranscribeAnimeDub',
+                request_serializer=whisper__pb2.LocalTranscribeAnimeDubRequest.SerializeToString,
+                response_deserializer=whisper__pb2.LocalTranscribeAnimeDubResponse.FromString,
                 )
 
 
 class WhisperServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def LocalTranscribe(self, request, context):
+    def LocalTranscribeAnimeDub(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -33,10 +33,10 @@ class WhisperServicer(object):
 
 def add_WhisperServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'LocalTranscribe': grpc.unary_unary_rpc_method_handler(
-                    servicer.LocalTranscribe,
-                    request_deserializer=whisper__pb2.LocalTranscribeRequest.FromString,
-                    response_serializer=whisper__pb2.LocalTranscribeResponse.SerializeToString,
+            'LocalTranscribeAnimeDub': grpc.unary_unary_rpc_method_handler(
+                    servicer.LocalTranscribeAnimeDub,
+                    request_deserializer=whisper__pb2.LocalTranscribeAnimeDubRequest.FromString,
+                    response_serializer=whisper__pb2.LocalTranscribeAnimeDubResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -49,7 +49,7 @@ class Whisper(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def LocalTranscribe(request,
+    def LocalTranscribeAnimeDub(request,
             target,
             options=(),
             channel_credentials=None,
@@ -59,8 +59,8 @@ class Whisper(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/Whisper/LocalTranscribe',
-            whisper__pb2.LocalTranscribeRequest.SerializeToString,
-            whisper__pb2.LocalTranscribeResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/Whisper/LocalTranscribeAnimeDub',
+            whisper__pb2.LocalTranscribeAnimeDubRequest.SerializeToString,
+            whisper__pb2.LocalTranscribeAnimeDubResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
