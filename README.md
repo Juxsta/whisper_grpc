@@ -6,7 +6,7 @@ This is a gRPC Python project that can transcribe items located on the server. I
 
 To start the server, run the following command:
 
-<pre><div class="bg-black mb-4 rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans"><button class="flex ml-auto gap-2"><code class="!whitespace-pre-wrap hljs language-bash">python whisper/server.py
+<pre><div class="bg-black mb-4 rounded-md"><code class="!whitespace-pre-wrap hljs language-bash">python whisper/server.py
 </code></div></div></pre>
 
 By default, the server is quiet, but it takes the `-v` and `-vv` arguments to increase the verbosity of the output.

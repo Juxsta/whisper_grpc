@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
     
 setup(
-    name="whisper-grpc",
+    name="whisper_grpc",
     version="0.1.0",
     author="John Doe",
     author_email="john.doe@example.com",
@@ -23,8 +23,8 @@ setup(
     ],
     package_data={
         "whisper": [
-            "whisper/proto/*.proto",
-            "whisper/proto/*.py"
+            "proto/*.proto",
+            "proto/*.py"
         ]
     },
 )
