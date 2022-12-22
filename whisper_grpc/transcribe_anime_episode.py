@@ -2,13 +2,13 @@ import argparse
 from grpclib.client import Channel
 from proto.whisper_pb2 import LocalTranscribeAnimeDubRequest
 from common import MODEL_MAP, model_from_string
-from proto.whisper_grpc import WhisperStub
-from proto.whisper_pb2 import LocalTranscribeAnimeDubRequest
+from proto.whisper_grpc import WhisperBase
+from proto.whisper_pb2 import LocalTranscribeAnimeDubRequest, LocalTranscribeAnimeDubResponse
 import asyncio
 
 async def main():
     async with Channel('whisper-grpc', 50051) as channel:
-        stub = WhisperStub(channel)
+        stub = WhisperBase(channel)
         request = LocalTranscribeAnimeDubRequest(
             title=args.title,
             show=args.show,
@@ -16,8 +16,16 @@ async def main():
             episode=args.episode,
             model=model_from_string(args.model)
         )
-        async for response in stub.LocalTranscribeAnimeDub(request):
-            print(response)
+        async with stub.LocalTranscribeAnimeDub.open() as stream:
+            # Send initial request
+            await stream.send_message(request)
+            # Recieve Responses and print them as they come in
+            async for response in stream:
+                print(response)
+            print(await stream.recv_message())
+            print(await stream.recv_trailing_metadata())
+            stream.end()
+            
 
 # Parse the command-line arguments
 parser = argparse.ArgumentParser()
