@@ -1,4 +1,4 @@
-FROM python:3.7-bullseye
+FROM python:3.9.9-bullseye
 
 ENV VERBOSE=true
 ENV VERY_VERBOSE=false
@@ -12,7 +12,6 @@ RUN apt-get update && apt-get install -y libmagic-dev
 COPY Pipfile Pipfile.lock ./
 RUN python -m pip install --upgrade pip
 RUN pip install pipenv && pipenv install --dev --system --deploy
-
 # Copy the rest of the source code into the container
 COPY whisper_grpc /app/whisper_grpc
 
