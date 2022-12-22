@@ -20,7 +20,7 @@ def checkTruthy(string:str or None):
 verbose = checkTruthy(os.getenv("VERBOSE"))
 very_verbose = checkTruthy(os.getenv("VERY_VERBOSE"))
 host = os.getenv("HOST")
-port = int(os.getenv("PORT"))
+port = int(os.getenv("PORT")) if os.getenv("PORT") else None
 async def main(args):
     if args.very_verbose or very_verbose:
         logging.basicConfig(level=logging.DEBUG)
