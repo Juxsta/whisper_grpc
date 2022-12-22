@@ -1,9 +1,9 @@
 import argparse
 from grpclib.client import Channel
-from whisper_grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubRequest
-from whisper_grpc.common import MODEL_MAP, model_from_string
-from whisper_grpc.proto.whisper_grpc import WhisperBase
-from whisper_grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubRequest, LocalTranscribeAnimeDubResponse
+from proto.whisper_pb2 import LocalTranscribeAnimeDubRequest
+from common import MODEL_MAP, model_from_string
+from proto.whisper_grpc import WhisperBase
+from proto.whisper_pb2 import LocalTranscribeAnimeDubRequest, LocalTranscribeAnimeDubResponse
 import asyncio
 
 async def main():
