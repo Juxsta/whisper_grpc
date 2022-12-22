@@ -1,4 +1,4 @@
-FROM python:3.8-bullseye
+FROM python:3.7-bullseye
 
 ENV VERBOSE=true
 ENV VERY_VERBOSE=false
