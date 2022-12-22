@@ -15,8 +15,9 @@ By default, the server is quiet, but it takes the `-v` and `-vv` arguments to in
 
 To install the client, you can use `pip` as follows:
 
-<pre><div class="bg-black mb-4 rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs">pip install whisper-grpc
+<pre><div class="bg-black mb-4 rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs">pipenv install git+https://github.com/Juxsta/whisper_grpc.git#egg=whisper-grpc
 </code></div></div></pre>
+
 
 This will install the `whisper_pb2_grpc` module, which you can use to create a client stub and call the service's RPC methods.
 

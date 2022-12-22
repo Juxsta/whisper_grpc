@@ -6,11 +6,11 @@ with open("README.md", "r") as fh:
 setup(
     name="whisper_grpc",
     version="0.1.0",
-    author="John Doe",
-    author_email="john.doe@example.com",
+    author="Juxsta",
     description="A gRPC Python project for transcribing audio",
+    python_requires=">=3.8",
     long_description_content_type="text/markdown",
-    url="https://github.com/johndoe/whisper-grpc",
+    url="https://github.com/Juxsta/whisper_grpc",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
