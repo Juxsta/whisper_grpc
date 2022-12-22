@@ -13,7 +13,7 @@ MODEL_MAP = {
 }
 
 def model_from_string(model_string: str) -> Model:
-    return MODEL_MAP[model_string]
+    return {v: k for k, v in MODEL_MAP.items()}[model_string]
 
 def model_to_string(model: Model) -> str:
     return MODEL_MAP[model]
