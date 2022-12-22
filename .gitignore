@@ -1,0 +1,3 @@
+whisper_grpc.egg*
+build*
+whisper/__pycache__*

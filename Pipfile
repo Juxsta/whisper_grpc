@@ -12,6 +12,7 @@ python-ffmpeg = "*"
 whisper = {git = "https://github.com/openai/whisper.git"}
 plexapi = "*"
 pyinstaller = "*"
+grpclib = {extras = ["protobuf"], version = "*"}
 
 [dev-packages]
 autopep8 = "*"

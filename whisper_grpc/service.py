@@ -3,74 +3,85 @@ import concurrent.futures
 import logging
 import grpc
 import os
-import proto.whisper_pb2_grpc as whisper_pb2_grpc
-from transcribe import transcribe_file
+import proto.whisper_grpc as whisper_grpc
+from transcribe_anime_episode import transcribe_file
 from proto.whisper_pb2 import LocalTranscribeAnimeDubRequest, LocalTranscribeAnimeDubResponse
 from common import MODEL_MAP
 from utils.client_plex import ClientPlexServer
 
 plex_url = os.getenv("PLEX_URL", "http://plex:32400")
-plex_token = os.getenv("PLEX_TOKEN")
-class WhisperHandler (whisper_pb2_grpc.WhisperServicer):
-    def __init__(self, logging_level=logging.WARNING):
-        self.executor = concurrent.futures.ThreadPoolExecutor(max_workers=5)
-        # Create a logger with the same name as the class
+plex_token = os.getenv("PLEX_TOKEN", "avc")
+transcribe_timeout = os.getenv("TRANSCRIBE_TIMEOUT", 30) * 60 #in minutes
+class WhisperHandler (whisper_grpc.WhisperBase):
+    def __init__(self, max_concurrent_transcribes=4, logging_level=logging.WARNING):
+        self.max_concurrent_tasks = max_concurrent_transcribes
+        self.executor = concurrent.futures.ThreadPoolExecutor(max_workers=self.max_concurrent_tasks)
+        self.semaphore = asyncio.Semaphore(self.max_concurrent_tasks)
         self.logger = logging.getLogger(self.__class__.__name__)
         self.logger.setLevel(logging_level)
-
-        if plex_url is None:
-            self.logger.warning("PLEX_URL is not set, defaulting to http://plex:32400")
-        if plex_token is None:
-            self.logger.error("PLEX_TOKEN is not set")
-            raise ValueError("PLEX_TOKEN is not set")
-
-    async def LocalTranscribeAnimeDub(self, request: LocalTranscribeAnimeDubRequest, context) -> LocalTranscribeAnimeDubResponse:
+        
+    async def submit_task(self, file, model, verbose):
+        async with self.semaphore:
+            task = self.executor.submit(transcribe_file, file, model, verbose)
+            try:
+                result = await asyncio.wrap_future(task)
+                self.logger.info(f"Transcription complete: {result}")
+                return "Transcription for file {file} complete: {result}"
+            except Exception as e:
+                self.logger.error(f"Transcription failed: {e}")
+                return f"Transcription for file {file} failed: {e}"
+        
+    async def LocalTranscribeAnimeDub(self, stream):
+        # Get the first request
+        request = await stream.recv_message()
+        stream.send_initial_metadata([('grpc-status', '0')])
+        self.logger.info(f"LocalTranscribeAnimeDub: {request}")
         try:
             model = MODEL_MAP[request.model]
         except KeyError:
             # Return an error to the client
-            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
-            context.set_details(f"Invalid model: {request.model}")
-            response =  LocalTranscribeAnimeDubResponse()
-            yield response
+            stream.send_initial_metadata([('grpc-status', '3')])
+            stream.set_trailing_metadata([('grpc-status-details-bin', 'Invalid model')])
+            self.logger.error(f"Invalid model: {request.model}")
             return
+
         try:
             plex = ClientPlexServer(plex_url, plex_token, request.title, request.show, request.season, request.episode, log_level=self.logger.getEffectiveLevel())
         except Exception as e:
-            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
-            context.set_details(f"Unable to find requested title: {request.title}  Error: {e}")
-            response = LocalTranscribeAnimeDubResponse()
-            yield response
+            stream.send_initial_metadata([('grpc-status', '3')])
+            stream.set_trailing_metadata([('grpc-status-details-bin', f'Unable to find requested title: {request.title}  Error: {e}')])
+            self.logger.error(f"Unable to find requested title: {request.title}  Error: {e}")
             return
-        if not self.plex.is_anime():
-            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
-            context.set_details(f"Title is not an anime: {request.title}")
-            response = LocalTranscribeAnimeDubResponse()
-            yield response
+        if not plex.is_anime():
+            stream.send_initial_metadata([('grpc-status', '3')])
+            stream.set_trailing_metadata([('grpc-status-details-bin', f'Title is not an anime: {request.title}')])
+            self.logger.error(f"Title is not an anime: {request.title}")
             return
 
         # Process the transcription tasks asynchronously
-        loop = asyncio.get_event_loop()
-        tasks = []
-        # Transcribe the current episode up to request.max_after if defined
-        for i in range(request.max_after + 1 if request.max_after else 1):
+        episodes_to_transcribe = []
+        try:
+            for i in range(request.max_after + 1 if request.max_after else 1):
+                episodes_to_transcribe.append(plex.get_episode_location())
+                plex.set_next_episode()
+        except Exception as e:
+            if len(episodes_to_transcribe == 0):
+                stream.send_initial_metadata([('grpc-status', '3')])
+                stream.set_trailing_metadata([('grpc-status-details-bin', f'Unable to find requested episode: {request.title}  Error: {e}')])
+                return
+            pass
+        # Transcribe the episodes in episodes_to_transcribe
+        self.logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes")
+        tasks = map(lambda x: self.submit_task(x, model, request.verbose), episodes_to_transcribe)
+        for task in asyncio.as_completed(tasks): 
+            response = LocalTranscribeAnimeDubResponse()
             try:
-                episode_location = plex.get_episode_location()
-                self.logger.info(f"Transcribing {episode_location} with model {model}")
-                task = loop.run_in_executor(self.executor, transcribe_file, episode_location, model, False)
-                tasks.append(task)
-                self.plex.set_next_episode()
+                response.message = await task
+                self.logger.info(f"Succes")
+                await stream.send_message(response)
             except Exception as e:
-                self.logger.error(f"Unable to find next episode: {e}")
-                break
-
-        # Wait for all transcription tasks to complete
-        results = []
-        for task in asyncio.as_completed(tasks):
-            result = await task
-            self.logger.info(f"Transcription complete: {result}")
-            results.append(result)
-
-        # Return the results to the client
-        response = LocalTranscribeAnimeDubResponse(text="Transcription tasks complete")
-        yield response
+                self.logger.error(f"Failed")
+                response.message = f"Failed: {e}"
+                await stream.send_message(response)
+        stream.set_trailing_metadata([('grpc-status-details-bin', 'Success')])
+        return
