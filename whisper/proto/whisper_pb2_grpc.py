@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import whisper_pb2 as whisper__pb2
+from . import whisper_pb2 as whisper__pb2
 
 
 class WhisperStub(object):

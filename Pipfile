@@ -11,9 +11,10 @@ python-magic = "*"
 python-ffmpeg = "*"
 whisper = {git = "https://github.com/openai/whisper.git"}
 plexapi = "*"
+pyinstaller = "*"
 
 [dev-packages]
 autopep8 = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.8"

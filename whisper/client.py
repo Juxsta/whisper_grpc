@@ -1,86 +1,40 @@
 import argparse
-import ffmpeg
-import plexapi
 import logging
-import grpc
-import asyncio
-from plexapi.server import PlexServer
-from proto.whisper_pb2 import LocalTranscribeAnimeDubRequest
-from proto.whisper_pb2_grpc import WhisperStub
 from common import MODEL_MAP, model_from_string
-# CONSTANTS
-PLEX_URL = 'http://plex:32400'  # Replace with the actual URL of your Plex instance
-# Replace with the actual token for your Plex instance
-PLEX_TOKEN = 'twyXwRPWArQw6Dr12Ui4'
+from client_plex import ClientPlexServer
+from client_whisper import ClientWhisper
+MAX_EPISODES = 4
 
-# function to connect to grpc server, send request and wait for response
-
-
-async def transcribe(directory, model):
-    # Connect to the Whisper server
-    channel = grpc.insecure_channel('localhost:50051')
-    stub = WhisperStub(channel)
-
-    # Send the request to the server
-    request = LocalTranscribeAnimeDubRequest(path=directory, model=model)
-
-    # Stream the response asynchronously
-    loop = asyncio.get_event_loop()
-    response_stream = stub.LocalTranscribeAnimeDub.async_stream(
-        request,
-        loop=loop
-    )
-    responses = []
-    async for response in response_stream:
-        logging.info(f'Received response: {response.text}')
-        responses.append(response)
-    await asyncio.gather(*responses)
-
-
-def main(args):
+async def main(args):
     if args.very_verbose:
         logging.basicConfig(level=logging.DEBUG)
     elif args.verbose:
         logging.basicConfig(level=logging.INFO)
     else:
         logging.basicConfig(level=logging.WARNING)
-
     logging.debug(args)
-
-    # Connect to the Plex instance
-    plex = PlexServer(PLEX_URL, PLEX_TOKEN)
-    # Search for the media with the given title
     try:
-        show = plex.library.section("TV Shows").get(args.show)
-        logging.debug(f'Found show {show}')
-        season = show.season(args.season)
-        logging.debug(f'Found season {season}')
-        episode = season.episode(args.episode)
-        logging.debug(f'Found episode {episode}')
-    except plexapi.exceptions.NotFound:
+        plex = ClientPlexServer(args.plex_url, args.plex_token, args.show, args.season, args.episode, log_level=logging.getLogger().getEffectiveLevel())
+    except Exception as e:
         logging.error(f'No media found with title "{args.title}"')
+        logging.error(e)
         exit(1)
-
-    logging.debug(f'Found {season}')
-    # Only transcribe the media if show is anime
-    # It is an anime if the episode has an english and japanese audio track
-    logging.debug(f'location: {episode.locations}')
-
-    location = episode.locations[0]
-    video_file = ffmpeg.probe(location)
-    if any(
-        stream["codec_type"] == "audio" and stream["tags"]["language"] == "jpn"
-        for stream in video_file["streams"]
-    ):
-        logging.debug(f'Found Japanese audio track')
-
-        transcribe(episode.locations[0], model_from_string(args.model))
-
-    else:
-        logging.error(f'Skipping {args.title} - not an anime TV show')
+    if not plex.is_anime():
+        logging.error(f'{args.show} is not an anime')
         exit(1)
-
-
+    # Establish connection to the Whisper server
+    whisper = ClientWhisper(args.grpc_host, args.grpc_port, log_level=logging.getLogger().getEffectiveLevel())
+    #  Loop over this episode and the next MAX_EPISODES episodes and transcribe them
+    try:
+        for i in range(0, MAX_EPISODES):
+            logging.info(f'Transcribing episode {plex.episode_number}')
+            whisper.transcribe(plex.get_episode_location(), model_from_string(args.model))
+            plex.next_episode()
+    except Exception as e:
+        logging.error(e)
+    await whisper.wait_for_transcribe_tasks()
+    whisper.close()
+    
 if __name__ == "__main__":
     # Parse command line arguments
     parser = argparse.ArgumentParser()
@@ -96,6 +50,10 @@ if __name__ == "__main__":
     parser.add_argument('--verbose', '-v', action='store_true', help='Enable verbose logging')
     parser.add_argument('--very-verbose', '-vv',
                         action='store_true', help='Enable very verbose logging')
+    parser.add_argument('--plex_url', help='URL of the Plex instance', default="http://plex:32400")
+    parser.add_argument('--plex_token', help='Token for the Plex instance', required=True)
+    parser.add_argument('--grpc_host', help='Hostname for the gRPC server', default='whisper-server')
+    parser.add_argument('--grpc_port', help='Port for the gRPC server', default=50051, type=int)
 
     args = parser.parse_args()
     main(args)
