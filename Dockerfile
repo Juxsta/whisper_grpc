@@ -1,5 +1,10 @@
 FROM python:3.8-bullseye
 
+ENV VERBOSE=true
+ENV VERY_VERBOSE=false
+ENV PLEX_URL=http://localhost:32400
+ENV PLEX_TOKEN=your-plex-token
+ENV MAX_CONCURRENT_TRANSCRIBES=4
 # Copy the Pipfile and Pipfile.lock into the container
 RUN apt-get update && apt-get install -y libmagic-dev
 COPY Pipfile Pipfile.lock ./

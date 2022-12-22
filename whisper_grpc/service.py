@@ -4,16 +4,17 @@ import logging
 import grpc
 import os
 import proto.whisper_grpc as whisper_grpc
-from transcribe_anime_episode import transcribe_file
-from proto.whisper_pb2 import LocalTranscribeAnimeDubRequest, LocalTranscribeAnimeDubResponse
+from proto.whisper_pb2 import LocalTranscribeAnimeDubResponse
 from common import MODEL_MAP
 from utils.client_plex import ClientPlexServer
+from transcribe import transcribe_file
 
 plex_url = os.getenv("PLEX_URL", "http://plex:32400")
-plex_token = os.getenv("PLEX_TOKEN", "avc")
+plex_token = os.getenv("PLEX_TOKEN")
+max_concurrent_transcribes = int(os.getenv("MAX_CONCURRENT_TRANSCRIBES", 4))
 transcribe_timeout = os.getenv("TRANSCRIBE_TIMEOUT", 30) * 60 #in minutes
 class WhisperHandler (whisper_grpc.WhisperBase):
-    def __init__(self, max_concurrent_transcribes=4, logging_level=logging.WARNING):
+    def __init__(self, logging_level=logging.WARNING):
         self.max_concurrent_tasks = max_concurrent_transcribes
         self.executor = concurrent.futures.ThreadPoolExecutor(max_workers=self.max_concurrent_tasks)
         self.semaphore = asyncio.Semaphore(self.max_concurrent_tasks)
@@ -77,7 +78,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
             response = LocalTranscribeAnimeDubResponse()
             try:
                 response.message = await task
-                self.logger.info(f"Succes")
+                self.logger.info(f"Successfully transcribed {request.title}: {response.message}")
                 await stream.send_message(response)
             except Exception as e:
                 self.logger.error(f"Failed")
