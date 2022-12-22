@@ -1,0 +1,18 @@
+services:
+  whisper-grpc:
+    image: juxsta/whisper-server:latest
+    # volumes:
+    #   - /mnt/user/media:/user/media
+    environment:
+      - VERY_VERBOSE=1
+      - PLEX_URL=http://plex:32400
+      - PLEX_TOKEN=fiyUv5zrzWPcsHrM8fxU
+      - MAX_CONCURRENT_TRANSCRIBES=4
+    # runtime: nvidia
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
