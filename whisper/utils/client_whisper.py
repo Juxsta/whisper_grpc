@@ -5,6 +5,7 @@ import logging
 import asyncio
 
 class ClientWhisper:
+    """This client is deprecated """
     def __init__(self, host, port, logging_level=logging.WARNING):
         self.host = host
         self.port = port

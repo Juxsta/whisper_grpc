@@ -6,8 +6,12 @@ service Whisper {
 // set enum for model of local transcribe request: tiny.en 
 
 message LocalTranscribeAnimeDubRequest {
-    string path = 1;
-    Model model = 2;
+    string title = 1;
+    string show = 2;
+    string season = 3;
+    string episode = 4;
+    Model model = 5;
+    optional int32 max_after = 6; // max number of episodes to transcribe after this one
 }
 
 message LocalTranscribeAnimeDubResponse {

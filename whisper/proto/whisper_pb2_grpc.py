@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from . import whisper_pb2 as whisper__pb2
+from whisper.proto import whisper_pb2 as whisper_dot_proto_dot_whisper__pb2
 
 
 class WhisperStub(object):
@@ -16,8 +16,8 @@ class WhisperStub(object):
         """
         self.LocalTranscribeAnimeDub = channel.unary_unary(
                 '/Whisper/LocalTranscribeAnimeDub',
-                request_serializer=whisper__pb2.LocalTranscribeAnimeDubRequest.SerializeToString,
-                response_deserializer=whisper__pb2.LocalTranscribeAnimeDubResponse.FromString,
+                request_serializer=whisper_dot_proto_dot_whisper__pb2.LocalTranscribeAnimeDubRequest.SerializeToString,
+                response_deserializer=whisper_dot_proto_dot_whisper__pb2.LocalTranscribeAnimeDubResponse.FromString,
                 )
 
 
@@ -35,8 +35,8 @@ def add_WhisperServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'LocalTranscribeAnimeDub': grpc.unary_unary_rpc_method_handler(
                     servicer.LocalTranscribeAnimeDub,
-                    request_deserializer=whisper__pb2.LocalTranscribeAnimeDubRequest.FromString,
-                    response_serializer=whisper__pb2.LocalTranscribeAnimeDubResponse.SerializeToString,
+                    request_deserializer=whisper_dot_proto_dot_whisper__pb2.LocalTranscribeAnimeDubRequest.FromString,
+                    response_serializer=whisper_dot_proto_dot_whisper__pb2.LocalTranscribeAnimeDubResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -60,7 +60,7 @@ class Whisper(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/Whisper/LocalTranscribeAnimeDub',
-            whisper__pb2.LocalTranscribeAnimeDubRequest.SerializeToString,
-            whisper__pb2.LocalTranscribeAnimeDubResponse.FromString,
+            whisper_dot_proto_dot_whisper__pb2.LocalTranscribeAnimeDubRequest.SerializeToString,
+            whisper_dot_proto_dot_whisper__pb2.LocalTranscribeAnimeDubResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

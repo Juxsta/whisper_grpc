@@ -1,4 +1,4 @@
-import argparse, glob, logging, magic, subprocess, tempfile, whisper, pickle, os, datetime, ffmpeg
+import logging, magic, tempfile, whisper, os, ffmpeg
 from whisper.utils import write_srt
 from pathlib import Path
 
