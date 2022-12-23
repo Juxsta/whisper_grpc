@@ -21,7 +21,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.logger.setLevel(logging_level)
         
-    async def submit_task(self, file, model):
+    async def submit_task(self, file:str, model:str):
         async with self.semaphore:
             task = self.executor.submit(transcribe_file, file, model,self.logger.getEffectiveLevel())
             try:
@@ -69,16 +69,17 @@ class WhisperHandler (whisper_grpc.WhisperBase):
             pass
         # Transcribe the episodes in episodes_to_transcribe
         self.logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes")
-        tasks = map(lambda x: self.submit_task(x, model, request.verbose), episodes_to_transcribe)
+        def map_to_task(ep_location:str):
+            return self.submit_task(ep_location, model)
+        tasks = map(map_to_task, episodes_to_transcribe)
         for task in asyncio.as_completed(tasks): 
-            response = LocalTranscribeAnimeDubResponse()
             try:
-                response.message = await task
+                response = LocalTranscribeAnimeDubResponse(text=await task)
                 self.logger.info(f"Successfully transcribed {request.title}: {response.message}")
                 await stream.send_message(response)
             except Exception as e:
                 self.logger.error(f"Failed")
-                response.message = f"Failed: {e}"
+                response = LocalTranscribeAnimeDubResponse(text=f"Failed: {e}")
                 await stream.send_message(response)
         stream.send_trailing_metadata(status_message=f"Transcription complete for {request.title} and {request.max_after} episodes after")
         return

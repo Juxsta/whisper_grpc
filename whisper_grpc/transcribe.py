@@ -2,9 +2,10 @@ import logging, magic, tempfile, whisper, os, ffmpeg
 from whisper.utils import write_srt
 from pathlib import Path
 
-def transcribe_file(file, model, logging_level=logging.WARNING):
+def transcribe_file(file:str, model:str, logging_level=logging.WARNING):
     logger = logging.getLogger(__name__)
     logger.setLevel(logging_level)
+    logger.debug(f'Transcribing {file} with model {model}')
     output_path = Path(file).with_suffix('.en.srt')
     if  output_path.exists(): 
         logger.warning(f'Skipping {file} - external subtitles already exist')
@@ -17,7 +18,7 @@ def transcribe_file(file, model, logging_level=logging.WARNING):
         logger.info(f'Transcribing {file}')
         with tempfile.TemporaryDirectory() as tmpdir:
             try:
-                output_file = str(Path(tmpdir) / os.path.basename(file).with_suffix('.wav'))
+                output_file = f'{tmpdir}/{file}.wav'
                 transcribe_audio_file(file, output_file)
                 result = whisper.transcribe(
                     model, output_file, beam_size=5, best_of=5, verbose=logger.getEffectiveLevel() <= logging.DEBUG,
@@ -35,9 +36,9 @@ def transcribe_audio_file(input_file, output_file):
     (
         ffmpeg
         .input(input_file)
-        .audio_filter("-map 0:a:m:language:eng")
-        .audio_codec("pcm_s16le")
-        .output(output_file)
+        .audio(metadata='language=eng')
+        .output(output_file, output_format='mp3')
+        .overwrite_output()
         .run()
     )
 
