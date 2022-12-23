@@ -73,7 +73,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
             return self.submit_task(ep_location, model)
         tasks = map(map_to_task, episodes_to_transcribe)
         as_completed = asyncio.as_completed(tasks)
-        await stream.send_message(LocalTranscribeAnimeDubResponse(response=f"Transcribing the following episodes: {episodes_to_transcribe}"))
+        await stream.send_message(LocalTranscribeAnimeDubResponse(text=f"Transcribing the following episodes: {episodes_to_transcribe}"))
         for task in as_completed: 
             try:
                 self.logger.info(f"Successfully transcribed this episode: {await task}")
