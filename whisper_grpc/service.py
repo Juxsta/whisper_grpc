@@ -21,9 +21,9 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.logger.setLevel(logging_level)
         
-    async def submit_task(self, file, model, verbose):
+    async def submit_task(self, file, model):
         async with self.semaphore:
-            task = self.executor.submit(transcribe_file, file, model, verbose)
+            task = self.executor.submit(transcribe_file, file, model,self.logger.getEffectiveLevel())
             try:
                 result = await asyncio.wrap_future(task)
                 self.logger.info(f"Transcription complete: {result}")

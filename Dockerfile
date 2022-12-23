@@ -20,6 +20,8 @@ WORKDIR /app
 
 COPY . /app
 
+RUN /usr/bin/yes | pip uninstall ffmpeg-python
+RUN /usr/bin/yes | pip install ffmpeg-python
 # Creates a non-root user and adds permission to access the /app folder
 RUN adduser -u 1000 --disabled-password --gecos "" whisper_grpc && chown -R whisper_grpc /app
 USER whisper_grpc

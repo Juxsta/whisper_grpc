@@ -36,8 +36,7 @@ class ClientPlexServer:
     def set_next_episode(self):
         if self.episode is None:
             raise ValueError('No episode set')
-        episodes = self.plex.library.section(
-            self.episode.librarySectionTitle).get(self.show).episodes()
+        episodes = self.show.episodes()
         season_number = self.episode.parentIndex
         episode_number = self.episode.index
         try:
