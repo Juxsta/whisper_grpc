@@ -1,13 +1,19 @@
-import logging, magic, tempfile, whisper, os, ffmpeg
+import logging
+import magic
+import tempfile
+import whisper
+import os
+import ffmpeg
 from whisper.utils import write_srt
 from pathlib import Path
 
-def transcribe_file(file:str, model:str, logging_level=logging.WARNING):
+
+def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
     logger = logging.getLogger(__name__)
     logger.setLevel(logging_level)
     logger.debug(f'Transcribing {file} with model {model}')
     output_path = Path(file).with_suffix('.en.srt')
-    if  output_path.exists(): 
+    if output_path.exists():
         logger.warning(f'Skipping {file} - external subtitles already exist')
         return "Subtitles already exist"
     if not os.path.isfile(file):
@@ -16,15 +22,16 @@ def transcribe_file(file:str, model:str, logging_level=logging.WARNING):
     file_type = magic.from_file(file, mime=True)
     if file_type.startswith('audio/') or file_type.startswith('video/'):
         logger.info(f'Transcribing {file}')
+        whisper_model = whisper.load_model(model)
         with tempfile.TemporaryDirectory() as tmpdir:
             try:
                 output_file = f'{tmpdir}/{file}.wav'
                 transcribe_audio_file(file, output_file)
-                result = whisper.transcribe(
-                    model, output_file, beam_size=5, best_of=5, verbose=logger.getEffectiveLevel() <= logging.DEBUG,
-                    language="en")
+                result = whisper_model.transcribe(output_file, beam_size=5, best_of=5, verbose=logger.getEffectiveLevel(
+                ) <= logging.DEBUG, decode_options={"language": "en"})
             except ffmpeg.Error as e:
-                logger.error(f'No English audio track found in {file}, error: {e.stderr}')
+                logger.error(
+                    f'No English audio track found in {file}, error: {e.stderr}')
                 raise ValueError(f'No English audio track found in {file}')
         save_results(result, output_path)
         return f"Transcribed {file} to {output_path}"
@@ -32,17 +39,18 @@ def transcribe_file(file:str, model:str, logging_level=logging.WARNING):
         logger.error(f'Unsupported file type: {file_type}')
         raise ValueError(f'Unsupported file type: {file_type}')
 
+
 def transcribe_audio_file(input_file, output_file):
     (
         ffmpeg
         .input(input_file)
-        .audio(metadata='language=eng')
-        .output(output_file, output_format='mp3')
-        .overwrite_output()
+        .audio_filter("-map 0:a:m:language:eng")
+        .audio_codec("pcm_s16le")
+        .output(output_file)
         .run()
     )
+
 
 def save_results(result, output_path):
     with open(output_path, "w", encoding="utf-8") as srt:
         write_srt(result["segments"], file=srt)
-
