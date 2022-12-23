@@ -68,7 +68,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
                 return
             pass
         # Transcribe the episodes in episodes_to_transcribe
-        self.logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes")
+        self.logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes: {episodes_to_transcribe}")
         def map_to_task(ep_location:str):
             return self.submit_task(ep_location, model)
         tasks = map(map_to_task, episodes_to_transcribe)

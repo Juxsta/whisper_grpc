@@ -14,7 +14,8 @@ async def main():
             show=args.show,
             season=args.season,
             episode=args.episode,
-            model=model_from_string(args.model)
+            model=model_from_string(args.model),
+            max_after=args.max_after
         )
         async with stub.LocalTranscribeAnimeDub.open() as stream:
             # Send initial request
@@ -34,5 +35,6 @@ parser.add_argument('--show', required=True, help='Show of the media to transcri
 parser.add_argument('--season', required=True, help='Season of the media to transcribe')
 parser.add_argument('--episode', required=True, help='Episode of the media to transcribe')
 parser.add_argument('--model', help='Model to use for transcribing', default='BASE_EN', type=str, choices=MODEL_MAP.values())
+parser.add_argument('--max_after', help='Number of episodes to process after the requested episode', default=0, type=int)
 args = parser.parse_args()
 asyncio.run(main())
