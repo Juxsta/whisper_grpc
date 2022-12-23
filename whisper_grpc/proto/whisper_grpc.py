@@ -22,7 +22,7 @@ class WhisperBase(abc.ABC):
         return {
             '/Whisper/LocalTranscribeAnimeDub': grpclib.const.Handler(
                 self.LocalTranscribeAnimeDub,
-                grpclib.const.Cardinality.UNARY_STREAM,
+                grpclib.const.Cardinality.UNARY_UNARY,
                 proto.whisper_pb2.LocalTranscribeAnimeDubRequest,
                 proto.whisper_pb2.LocalTranscribeAnimeDubResponse,
             ),
@@ -32,7 +32,7 @@ class WhisperBase(abc.ABC):
 class WhisperStub:
 
     def __init__(self, channel: grpclib.client.Channel) -> None:
-        self.LocalTranscribeAnimeDub = grpclib.client.UnaryStreamMethod(
+        self.LocalTranscribeAnimeDub = grpclib.client.UnaryUnaryMethod(
             channel,
             '/Whisper/LocalTranscribeAnimeDub',
             proto.whisper_pb2.LocalTranscribeAnimeDubRequest,

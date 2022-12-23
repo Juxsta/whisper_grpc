@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 service Whisper {
-    rpc LocalTranscribeAnimeDub (LocalTranscribeAnimeDubRequest) returns (stream LocalTranscribeAnimeDubResponse) {}
+    rpc LocalTranscribeAnimeDub (LocalTranscribeAnimeDubRequest) returns (LocalTranscribeAnimeDubResponse) {}
 }
 // set enum for model of local transcribe request: tiny.en 
 
