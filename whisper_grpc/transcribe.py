@@ -8,10 +8,9 @@ from whisper.utils import write_srt
 from pathlib import Path
 import subprocess
 
-def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
+def transcribe_file(file: str, whisper_model: whisper.Whisper, logging_level=logging.WARNING):
     logger = logging.getLogger(__name__)
     logger.setLevel(logging_level)
-    logger.debug(f'Transcribing {file} with model {model}')
     output_path = Path(file).with_suffix('.en.srt')
     if output_path.exists():
         logger.warning(f'Skipping {file} - external subtitles already exist')
@@ -22,13 +21,11 @@ def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
     file_type = magic.from_file(file, mime=True)
     if file_type.startswith('audio/') or file_type.startswith('video/'):
         logger.info(f'Transcribing {file}')
-        whisper_model = whisper.load_model(model)
         with tempfile.TemporaryDirectory() as tmpdir:
             try:
                 audio_rip_path =  f'{tmpdir}/{os.path.basename(file)}.wav'
                 transcribe_audio_file(file, audio_rip_path)
-                result = whisper_model.transcribe(audio=audio_rip_path)
-                # result = whisper_model.transcribe(audio_rip_path, beam_size=5, best_of=5, decode_options={"language": "en"})
+                result = whisper_model.transcribe(audio=audio_rip_path, beam_size=5, best_of=5, decode_options={"language": "en"})
             except ffmpeg.Error as e:
                 logger.error(
                     f'No English audio track found in {file}, error: {e.stderr}')

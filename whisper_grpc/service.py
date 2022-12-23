@@ -9,9 +9,11 @@ from common import MODEL_MAP
 from utils.client_plex import ClientPlexServer
 from transcribe import transcribe_file
 from grpclib import Status
+import whisper
 plex_url = os.getenv("PLEX_URL", "http://plex:32400")
 plex_token = os.getenv("PLEX_TOKEN")
 max_concurrent_transcribes = int(os.getenv("MAX_CONCURRENT_TRANSCRIBES", 4))
+model = os.getenv("MODEL", "base.en")
 transcribe_timeout = os.getenv("TRANSCRIBE_TIMEOUT", 30) * 60 #in minutes
 class WhisperHandler (whisper_grpc.WhisperBase):
     def __init__(self, logging_level=logging.WARNING):
@@ -20,10 +22,11 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         self.semaphore = asyncio.Semaphore(self.max_concurrent_tasks)
         self.logger = logging.getLogger(self.__class__.__name__)
         self.logger.setLevel(logging_level)
+        self.whisper = whisper.load_model(model)
         
-    async def submit_task(self, file:str, model:str):
+    async def submit_task(self, file:str):
         async with self.semaphore:
-            task = self.executor.submit(transcribe_file, file, model,self.logger.getEffectiveLevel())
+            task = self.executor.submit(transcribe_file, file, self.whisper,self.logger.getEffectiveLevel())
             try:
                 result = await asyncio.wrap_future(task)
                 self.logger.info(f"Transcription complete: {result}")
