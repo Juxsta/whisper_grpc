@@ -25,7 +25,7 @@ def transcribe_file(file: str, whisper_model: whisper.Whisper, logging_level=log
             try:
                 audio_rip_path =  f'{tmpdir}/{os.path.basename(file)}.wav'
                 transcribe_audio_file(file, audio_rip_path)
-                result = whisper_model.transcribe(audio=audio_rip_path, beam_size=5, best_of=5, decode_options={"language": "en"})
+                result = whisper_model.transcribe(audio=audio_rip_path, beam_size=5, best_of=5, language="en")
             except ffmpeg.Error as e:
                 logger.error(
                     f'No English audio track found in {file}, error: {e.stderr}')
