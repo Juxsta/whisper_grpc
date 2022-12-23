@@ -17,9 +17,9 @@ class ClientPlexServer:
             self.show: Show = self.plex.library.section("TV Shows").get(show)
             self.title = title
             self.logger.debug(f'Found show {show}')
-            self.season: Season = show.season(season)
+            self.season: Season = self.show.season(season)
             self.logger.debug(f'Found season {season}')
-            self.episode: Episode = season.episode(episode)
+            self.episode: Episode = self.season.episode(episode)
             self.logger.debug(f'Found episode {episode}')
         except NotFound:
             self.logger.error(f'No media found with title "{title}"')

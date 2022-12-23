@@ -35,7 +35,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
     async def LocalTranscribeAnimeDub(self, stream):
         # Get the first request
         request = await stream.recv_message()
-        stream.send_initial_metadata([('grpc-status', '0')])
+        stream.send_initial_metadata(metadata=[('grpc-status', '0')])
         self.logger.info(f"LocalTranscribeAnimeDub: {request}")
         try:
             model = MODEL_MAP[request.model]
