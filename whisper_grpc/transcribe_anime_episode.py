@@ -22,8 +22,6 @@ async def main():
             await stream.recv_initial_metadata()
             print(stream.initial_metadata)
             # Recieve Responses and print them as they come in
-            async for response in stream:
-                print(response)
             print(await stream.recv_message())
             print(await stream.recv_trailing_metadata())
             await stream.end()

@@ -72,14 +72,11 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         def map_to_task(ep_location:str):
             return self.submit_task(ep_location, model)
         tasks = map(map_to_task, episodes_to_transcribe)
-        for task in asyncio.as_completed(tasks): 
+        as_completed = asyncio.as_completed(tasks)
+        await stream.send_message(LocalTranscribeAnimeDubResponse(response=f"Transcribing the following episodes: {episodes_to_transcribe}"))
+        for task in as_completed: 
             try:
-                response = LocalTranscribeAnimeDubResponse(text=await task)
-                self.logger.info(f"Successfully transcribed {request.title}: {response.message}")
-                await stream.send_message(response)
+                self.logger.info(f"Successfully transcribed this episode: {await task}")
             except Exception as e:
                 self.logger.error(f"Failed")
-                response = LocalTranscribeAnimeDubResponse(text=f"Failed: {e}")
-                await stream.send_message(response)
-        stream.send_trailing_metadata(status_message=f"Transcription complete for {request.title} and {request.max_after} episodes after")
         return
