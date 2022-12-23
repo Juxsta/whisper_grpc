@@ -8,7 +8,7 @@ from proto.whisper_pb2 import LocalTranscribeAnimeDubResponse
 from common import MODEL_MAP
 from utils.client_plex import ClientPlexServer
 from transcribe import transcribe_file
-
+from grpclib import Status
 plex_url = os.getenv("PLEX_URL", "http://plex:32400")
 plex_token = os.getenv("PLEX_TOKEN")
 max_concurrent_transcribes = int(os.getenv("MAX_CONCURRENT_TRANSCRIBES", 4))
@@ -41,21 +41,18 @@ class WhisperHandler (whisper_grpc.WhisperBase):
             model = MODEL_MAP[request.model]
         except KeyError:
             # Return an error to the client
-            stream.send_initial_metadata([('grpc-status', '3')])
-            stream.set_trailing_metadata([('grpc-status-details-bin', 'Invalid model')])
+            stream.send_trailing_metadata(status=Status.INVALID_ARGUMENT, status_message=f'Invalid model: {request.model}')
             self.logger.error(f"Invalid model: {request.model}")
             return
 
         try:
             plex = ClientPlexServer(plex_url, plex_token, request.title, request.show, request.season, request.episode, log_level=self.logger.getEffectiveLevel())
         except Exception as e:
-            stream.send_initial_metadata([('grpc-status', '3')])
-            stream.set_trailing_metadata([('grpc-status-details-bin', f'Unable to find requested title: {request.title}  Error: {e}')])
+            stream.send_trailing_metadata(status=Status.NOT_FOUND, status_message=f'Unable to find requested title: {request.title}  Error: {e}')
             self.logger.error(f"Unable to find requested title: {request.title}  Error: {e}")
             return
         if not plex.is_anime():
-            stream.send_initial_metadata([('grpc-status', '3')])
-            stream.set_trailing_metadata([('grpc-status-details-bin', f'Title is not an anime: {request.title}')])
+            stream.send_trailing_metadata(status=Status.INVALID_ARGUMENT, status_message=f'Title is not an anime: {request.title}')
             self.logger.error(f"Title is not an anime: {request.title}")
             return
 
@@ -67,8 +64,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
                 plex.set_next_episode()
         except Exception as e:
             if len(episodes_to_transcribe == 0):
-                stream.send_initial_metadata([('grpc-status', '3')])
-                stream.set_trailing_metadata([('grpc-status-details-bin', f'Unable to find requested episode: {request.title}  Error: {e}')])
+                stream.send_trailing_metadata(status=Status.NOT_FOUND, status_message=f'Unable to find any episodes for title: {request.title}  Error: {e}')
                 return
             pass
         # Transcribe the episodes in episodes_to_transcribe
@@ -84,5 +80,5 @@ class WhisperHandler (whisper_grpc.WhisperBase):
                 self.logger.error(f"Failed")
                 response.message = f"Failed: {e}"
                 await stream.send_message(response)
-        stream.set_trailing_metadata([('grpc-status-details-bin', 'Success')])
+        stream.send_trailing_metadata(status_message=f"Transcription complete for {request.title} and {request.max_after} episodes after")
         return

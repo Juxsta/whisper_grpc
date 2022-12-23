@@ -19,6 +19,8 @@ async def main():
         async with stub.LocalTranscribeAnimeDub.open() as stream:
             # Send initial request
             await stream.send_message(request)
+            await stream.recv_initial_metadata()
+            print(stream.initial_metadata)
             # Recieve Responses and print them as they come in
             async for response in stream:
                 print(response)
