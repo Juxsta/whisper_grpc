@@ -6,7 +6,7 @@ import os
 import ffmpeg
 from whisper.utils import write_srt
 from pathlib import Path
-
+import subprocess
 
 def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
     logger = logging.getLogger(__name__)
@@ -25,10 +25,10 @@ def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
         whisper_model = whisper.load_model(model)
         with tempfile.TemporaryDirectory() as tmpdir:
             try:
-                output_file = f'{tmpdir}/{file}.wav'
-                transcribe_audio_file(file, output_file)
-                result = whisper_model.transcribe(output_file, beam_size=5, best_of=5, verbose=logger.getEffectiveLevel(
-                ) <= logging.DEBUG, decode_options={"language": "en"})
+                audio_rip_path =  f'{tmpdir}/{os.path.basename(file)}.wav'
+                transcribe_audio_file(file, audio_rip_path)
+                result = whisper_model.transcribe(audio=audio_rip_path)
+                # result = whisper_model.transcribe(audio_rip_path, beam_size=5, best_of=5, decode_options={"language": "en"})
             except ffmpeg.Error as e:
                 logger.error(
                     f'No English audio track found in {file}, error: {e.stderr}')
@@ -40,15 +40,17 @@ def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
         raise ValueError(f'Unsupported file type: {file_type}')
 
 
-def transcribe_audio_file(input_file, output_file):
-    (
-        ffmpeg
-        .input(input_file)
-        .audio_filter("-map 0:a:m:language:eng")
-        .audio_codec("pcm_s16le")
-        .output(output_file)
-        .run()
-    )
+def transcribe_audio_file(input_file:str, output_file:str):
+    command = [
+        'ffmpeg',
+        '-i', input_file,
+        '-map', '0:a:0',
+        '-c:a', 'pcm_s16le',
+        '-metadata:s:a:0', 'language=eng',
+        output_file
+    ]
+    subprocess.run(command)
+
 
 
 def save_results(result, output_path):

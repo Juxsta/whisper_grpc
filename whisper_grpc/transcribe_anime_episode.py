@@ -26,7 +26,7 @@ async def main():
                 print(response)
             print(await stream.recv_message())
             print(await stream.recv_trailing_metadata())
-            stream.end()
+            await stream.end()
             
 
 # Parse the command-line arguments
