@@ -33,3 +33,6 @@ stub = whisper_pb2_grpc.WhisperStub(channel)
 
 # Call the service's RPC method
 response = stub.Transcribe(request)</code></div></div></pre>
+
+## Compiling Protos
+python3 -m grpc_tools.protoc -I. --python_out=. --grpclib_python_out=. proto/whisper.proto

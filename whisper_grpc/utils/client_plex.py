@@ -27,7 +27,12 @@ class ClientPlexServer:
         except Exception as e:
             self.logger.error(f'Error: {e}')
             raise e
-
+        
+    def get_episode(self):
+        if self.episode is None:
+            raise ValueError('No episode set')
+        return self.episode
+    
     def get_episode_location(self):
         if self.episode is None:
             raise ValueError('No episode set')
