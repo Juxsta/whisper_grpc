@@ -9,6 +9,7 @@ from common import MODEL_MAP
 from utils.client_plex import ClientPlexServer
 from transcribe import transcribe_file
 from grpclib import Status
+from plexapi.video import Episode
 plex_url = os.getenv("PLEX_URL", "http://plex:32400")
 plex_token = os.getenv("PLEX_TOKEN")
 max_concurrent_transcribes = int(os.getenv("MAX_CONCURRENT_TRANSCRIBES", 4))
@@ -21,12 +22,19 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.logger.setLevel(logging_level)
         
-    async def submit_task(self, file:str, model:str):
+    async def submit_task(self, file:str, model:str, episode:Episode = None):
+        """
+        Submit a task to the executor and return the result.
+        Episode is optional, and is only used as a helper to refresh episode metadata upon transcription completion.
+        """
         async with self.semaphore:
             task = self.executor.submit(transcribe_file, file, model,self.logger.getEffectiveLevel())
             try:
                 result = await asyncio.wrap_future(task)
                 self.logger.info(f"Transcription complete: {result}")
+                if episode is not None:
+                    self.logger.info(f"Refreshing episode metadata {episode.title}")
+                    episode.refresh()
                 return "Transcription for file {file} complete: {result}"
             except Exception as e:
                 self.logger.error(f"Transcription failed: {e}")
@@ -57,10 +65,10 @@ class WhisperHandler (whisper_grpc.WhisperBase):
             return
 
         # Process the transcription tasks asynchronously
-        episodes_to_transcribe = []
+        episodes_to_transcribe:list[Episode] = []
         try:
             for i in range(request.max_after + 1 if request.max_after else 1):
-                episodes_to_transcribe.append(plex.get_episode_location())
+                episodes_to_transcribe.append(plex.get_episode())
                 plex.set_next_episode()
         except Exception as e:
             if len(episodes_to_transcribe == 0):
@@ -68,9 +76,9 @@ class WhisperHandler (whisper_grpc.WhisperBase):
                 return
             pass
         # Transcribe the episodes in episodes_to_transcribe
-        self.logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes: {episodes_to_transcribe}")
-        def map_to_task(ep_location:str):
-            return self.submit_task(ep_location, model)
+        self.logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes: {map(lambda ep: ep.locations[0] ,episodes_to_transcribe)}")
+        def map_to_task(ep:Episode):
+            return self.submit_task(ep.locations[0], model, ep)
         tasks = map(map_to_task, episodes_to_transcribe)
         as_completed = asyncio.as_completed(tasks)
         await stream.send_message(LocalTranscribeAnimeDubResponse(text=f"Transcribing the following episodes: {episodes_to_transcribe}"))
