@@ -35,7 +35,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
                 if episode is not None:
                     self.logger.info(f"Refreshing episode metadata {episode.title}")
                     episode.refresh()
-                return "Transcription for file {file} complete: {result}"
+                return f"Transcription for file {file} complete: {result}"
             except Exception as e:
                 self.logger.error(f"Transcription failed: {e}")
                 return f"Transcription for file {file} failed: {e}"
@@ -77,7 +77,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
             pass
         # Transcribe the episodes in episodes_to_transcribe
         self.logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes: {map(lambda ep: ep.locations[0] ,episodes_to_transcribe)}")
-        await stream.send_message(LocalTranscribeAnimeDubResponse(text=f"Transcribing the following episodes: {map(lambda ep: ep.title, episodes_to_transcribe)}"))
+        await stream.send_message(LocalTranscribeAnimeDubResponse(text=f"Transcribing the following episodes: {map(lambda ep: ep.locations[0] ,episodes_to_transcribe)}"))
         def map_to_task(ep:Episode):
             return self.submit_task(ep.locations[0], model, ep)
         tasks = map(map_to_task, episodes_to_transcribe)
