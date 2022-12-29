@@ -56,11 +56,11 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         try:
             plex = ClientPlexServer(plex_url, plex_token, request.title, request.show, request.season, request.episode, log_level=self.logger.getEffectiveLevel())
         except Exception as e:
-            stream.send_trailing_metadata(status=Status.NOT_FOUND, status_message=f'Unable to find requested title: {request.title}  Error: {e}')
+            await stream.send_trailing_metadata(status=Status.NOT_FOUND, status_message=f'Unable to find requested title: {request.title}  Error: {e}')
             self.logger.error(f"Unable to find requested title: {request.title}  Error: {e}")
             return
         if not plex.is_anime():
-            stream.send_trailing_metadata(status=Status.INVALID_ARGUMENT, status_message=f'Title is not an anime: {request.title}')
+            await stream.send_trailing_metadata(status=Status.INVALID_ARGUMENT, status_message=f'Title is not an anime: {request.title}')
             self.logger.error(f"Title is not an anime: {request.title}")
             return
 
@@ -72,7 +72,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
                 plex.set_next_episode()
         except Exception as e:
             if len(episodes_to_transcribe == 0):
-                stream.send_trailing_metadata(status=Status.NOT_FOUND, status_message=f'Unable to find any episodes for title: {request.title}  Error: {e}')
+                await stream.send_trailing_metadata(status=Status.NOT_FOUND, status_message=f'Unable to find any episodes for title: {request.title}  Error: {e}')
                 return
             pass
         # Transcribe the episodes in episodes_to_transcribe
