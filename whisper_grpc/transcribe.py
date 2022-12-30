@@ -27,6 +27,7 @@ def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
             try:
                 audio_rip_path =  f'{tmpdir}/{os.path.basename(file)}.wav'
                 transcribe_audio_file(file, audio_rip_path)
+                logger.info(f'Transcribing {audio_rip_path}')
                 result = whisper_model.transcribe(audio_rip_path, beam_size=5, best_of=5, language="en")
             except ffmpeg.Error as e:
                 logger.error(
