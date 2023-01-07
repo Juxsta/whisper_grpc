@@ -13,6 +13,7 @@ whisper = {git = "https://github.com/openai/whisper.git"}
 plexapi = "*"
 pyinstaller = "*"
 grpclib = {extras = ["protobuf"], version = "*"}
+whisperx = {git = "https://github.com/m-bain/whisperX.git"}
 
 [dev-packages]
 autopep8 = "*"
