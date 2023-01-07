@@ -1,4 +1,5 @@
-FROM python:3.9.9-bullseye
+FROM anibali/pytorch:1.13.0-cuda11.8-ubuntu22.04
+
 
 ENV VERBOSE=true
 ENV VERY_VERBOSE=false

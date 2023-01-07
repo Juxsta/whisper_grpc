@@ -1,5 +1,3 @@
-import grpc
-import concurrent.futures as futures
 import argparse
 import logging
 from service import WhisperHandler
