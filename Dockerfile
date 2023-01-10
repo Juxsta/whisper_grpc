@@ -9,9 +9,9 @@ ENV HOST=127.0.0.1
 ENV PORT=50051
 # Copy the Pipfile and Pipfile.lock into the container
 RUN apt-get update && apt-get install -y libmagic-dev ffmpeg
-COPY requirements.txt .
+COPY Pipfile Pipfile.lock ./
 RUN python -m pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install pipenv && pipenv install --dev --system --deploy
 # Copy the rest of the source code into the container
 COPY whisper_grpc /app/whisper_grpc
 

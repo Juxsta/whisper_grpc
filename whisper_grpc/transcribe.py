@@ -1,10 +1,10 @@
 import logging
 import magic
 import tempfile
-import whisper
+import whisperx as whisper
 import os
 import ffmpeg
-from whisper.utils import write_srt
+from whisperx.utils import write_srt
 from pathlib import Path
 import subprocess
 
