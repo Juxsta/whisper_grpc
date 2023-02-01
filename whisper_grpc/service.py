@@ -1,7 +1,6 @@
 import asyncio
 import concurrent.futures
 import logging
-import grpc
 import os
 import proto.whisper_grpc as whisper_grpc
 from proto.whisper_pb2 import LocalTranscribeAnimeDubResponse

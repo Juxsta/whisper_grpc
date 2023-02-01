@@ -8,6 +8,7 @@ services:
       - PLEX_URL=http://plex:32400
       - PLEX_TOKEN=fiyUv5zrzWPcsHrM8fxU
       - MAX_CONCURRENT_TRANSCRIBES=4
+      - HF_TOKEN=aejawioejnaweionwae
     # runtime: nvidia
     # deploy:
     #   resources:
