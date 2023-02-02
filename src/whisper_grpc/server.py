@@ -4,7 +4,7 @@ console script. To run this script uncomment the following lines in the
 ``[options.entry_points]`` section in ``setup.cfg``::
 
     console_scripts =
-         whisper_server = whisper.main:run
+        whisper_server = whisper_grpc.server:run
 
 Then run ``pip install .`` (or ``pip install -e .`` for editable mode)
 which will install the command ``whisper_server`` inside your current environment.
