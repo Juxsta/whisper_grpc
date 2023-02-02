@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+whisperx = {git = "https://github.com/m-bain/whisperx.git"}
+ffmpeg-python = "*"
+plexapi = "*"
+protobuf = "*"
+grpclib = {extras = ["protobuf"], version = "*"}
+python-magic = "*"
+whisper-grpc = {editable = true, path = "."}
+
+[dev-packages]
+tox = "*"
+sphinx = "*"
+grpcio-tools = "*"
+grpcio = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-dotenv = "*"
+
+[requires]
+python_version = "3.10"

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+service Whisper {
+    rpc LocalTranscribeAnimeDub (LocalTranscribeAnimeDubRequest) returns (LocalTranscribeAnimeDubResponse) {}
+}
+// set enum for model of local transcribe request: tiny.en 
+
+message LocalTranscribeAnimeDubRequest {
+    string title = 1;
+    string show = 2;
+    string season = 3;
+    string episode = 4;
+    Model model = 5;
+    optional int32 max_after = 6; // max number of episodes to transcribe after this one
+}
+
+message LocalTranscribeAnimeDubResponse {
+    string text = 1;
+}
+
+enum Model {
+    TINY = 0;
+    BASE = 1;
+    SMALL = 2;
+    MEDIUM = 3;
+    LARGE = 4;
+    LARGE_V2 = 5;
+    TINY_EN = 6;
+    BASE_EN = 7;
+    SMALL_EN = 8;
+    MEDIUM_EN = 9;
+  }
