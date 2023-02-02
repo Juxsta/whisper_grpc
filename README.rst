@@ -36,8 +36,9 @@ whisper_grpc
 
     Add a short description here!
 
-
-A longer description of your project goes here...
+How to compile protos
+https://github.com/vmagamedov/grpclib
+python3 -m grpc_tools.protoc -I. --python_out=. --grpclib_python_out=. --pyi_out=. proto/whisper.proto
 
 
 .. _pyscaffold-notes:

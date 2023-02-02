@@ -25,10 +25,15 @@ import logging
 import sys
 from whisper_grpc import __version__
 import os
-
+import asyncio
 __author__ = "Juxsta"
 __copyright__ = "Juxsta"
 __license__ = "MIT"
+
+logging.basicConfig(
+    format="[%(asctime)s] %(levelname)s:%(name)s:%(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
 
 _logger = logging.getLogger(__name__)
 
@@ -79,16 +84,19 @@ def parse_args(args):
     return parser.parse_args(args)
 
 
-def setup_logging(loglevel):
+def setup_logging(args):
     """Setup basic logging
 
     Args:
       loglevel (int): minimum loglevel for emitting messages
     """
-    logformat = "[%(asctime)s] %(levelname)s:%(name)s:%(message)s"
-    logging.basicConfig(
-        level=loglevel, stream=sys.stdout, format=logformat, datefmt="%Y-%m-%d %H:%M:%S"
-    )
+    if args.very_verbose or very_verbose:
+        _logger.setLevel(logging.DEBUG)
+        
+    elif args.verbose or verbose:
+        _logger.setLevel(logging.INFO)
+    else:
+        _logger.setLevel(logging.WARNING)
 
 
 async def main(args):
@@ -102,18 +110,17 @@ async def main(args):
           (for example  ``["--verbose", "42"]``).
     """
     args = parse_args(args)
-    setup_logging(args.loglevel)
+    setup_logging(args)
     _logger.debug("Starting server...")
-    import asyncio
     from .service import WhisperHandler
     from grpclib.utils import graceful_exit
     from grpclib.server import Server
-    server = Server([WhisperHandler(logging_level=logging.getLogger().getEffectiveLevel())])
+    server = Server([WhisperHandler(logging_level=_logger.getEffectiveLevel())])
     with graceful_exit([server]):
         await server.start(host=host if host else args.host, port=port if port else args.port)
-        logging.info('Server started')
+        _logger.info('Server started')
         await server.wait_closed()
-        logging.info('Server closed')
+        _logger.info('Server closed')
     _logger.info("Server ends here")
 
 
@@ -122,7 +129,7 @@ def run():
 
     This function can be used as entry point to create console scripts with setuptools.
     """
-    main(sys.argv[1:])
+    asyncio.run(main(sys.argv[1:]))
 
 
 if __name__ == "__main__":

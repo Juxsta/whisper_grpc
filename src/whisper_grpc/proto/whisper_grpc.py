@@ -9,13 +9,13 @@ import grpclib.client
 if typing.TYPE_CHECKING:
     import grpclib.server
 
-import proto.whisper_pb2
+import whisper_grpc.proto.whisper_pb2
 
 
 class WhisperBase(abc.ABC):
 
     @abc.abstractmethod
-    async def LocalTranscribeAnimeDub(self, stream: 'grpclib.server.Stream[proto.whisper_pb2.LocalTranscribeAnimeDubRequest, proto.whisper_pb2.LocalTranscribeAnimeDubResponse]') -> None:
+    async def LocalTranscribeAnimeDub(self, stream: 'grpclib.server.Stream[whisper_grpc.proto.whisper_pb2.LocalTranscribeAnimeDubRequest, whisper_grpc.proto.whisper_pb2.LocalTranscribeAnimeDubResponse]') -> None:
         pass
 
     def __mapping__(self) -> typing.Dict[str, grpclib.const.Handler]:
@@ -23,8 +23,8 @@ class WhisperBase(abc.ABC):
             '/Whisper/LocalTranscribeAnimeDub': grpclib.const.Handler(
                 self.LocalTranscribeAnimeDub,
                 grpclib.const.Cardinality.UNARY_UNARY,
-                proto.whisper_pb2.LocalTranscribeAnimeDubRequest,
-                proto.whisper_pb2.LocalTranscribeAnimeDubResponse,
+                whisper_grpc.proto.whisper_pb2.LocalTranscribeAnimeDubRequest,
+                whisper_grpc.proto.whisper_pb2.LocalTranscribeAnimeDubResponse,
             ),
         }
 
@@ -35,6 +35,6 @@ class WhisperStub:
         self.LocalTranscribeAnimeDub = grpclib.client.UnaryUnaryMethod(
             channel,
             '/Whisper/LocalTranscribeAnimeDub',
-            proto.whisper_pb2.LocalTranscribeAnimeDubRequest,
-            proto.whisper_pb2.LocalTranscribeAnimeDubResponse,
+            whisper_grpc.proto.whisper_pb2.LocalTranscribeAnimeDubRequest,
+            whisper_grpc.proto.whisper_pb2.LocalTranscribeAnimeDubResponse,
         )
