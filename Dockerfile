@@ -12,7 +12,7 @@ ENV HF_TOKEN=your-huggingface-token
 RUN apt-get update && apt-get install -y libmagic-dev ffmpeg
 COPY requirements.txt .
 RUN python -m pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -e .
 # Copy the rest of the source code into the container
 COPY whisper_grpc /app/whisper_grpc
 
@@ -21,11 +21,9 @@ WORKDIR /app
 
 COPY . /app
 
-RUN /usr/bin/yes | pip uninstall ffmpeg-python
-RUN /usr/bin/yes | pip install ffmpeg-python
 # Creates a non-root user and adds permission to access the /app folder
 RUN adduser -u 1000 --disabled-password --gecos "" whisper_grpc && chown -R whisper_grpc /app
 USER whisper_grpc
 
 # Run the server when the container starts
-CMD ["python", "whisper_grpc/server.py"]
+CMD ["whisper_server"]
