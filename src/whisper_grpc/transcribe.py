@@ -7,10 +7,10 @@ import subprocess
 from pyannote.audio import Inference
 import ffmpeg
 import whisperx
+from whisperx.utils import write_ass
 
 hf_token = os.getenv("HF_TOKEN")
 device = 'cuda'
-
 
 def rip_audio_file(input_file: str, output_file: str):
     command = [
@@ -26,7 +26,7 @@ def rip_audio_file(input_file: str, output_file: str):
 
 def save_results(result, output_path):
     with open(output_path, "w", encoding="utf-8") as ass:
-        whisperx.write_ass(result["segments"], file=ass, resolution='char')
+        write_ass(result["segments"], file=ass, resolution='char')
 
 
 def validate_file(file: str):

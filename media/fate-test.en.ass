@@ -1,0 +1,644 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,24,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:0.00,0:00:0.02,Default,,0,0,0,,{\1c&HFF00&\u1}T{\r}here is an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.02,0:00:0.04,Default,,0,0,0,,T{\1c&HFF00&\u1}h{\r}ere is an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.04,0:00:0.06,Default,,0,0,0,,Th{\1c&HFF00&\u1}e{\r}re is an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.06,0:00:0.10,Default,,0,0,0,,The{\1c&HFF00&\u1}r{\r}e is an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.10,0:00:0.12,Default,,0,0,0,,Ther{\1c&HFF00&\u1}e{\r} is an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.12,0:00:0.14,Default,,0,0,0,,There{\1c&HFF00&\u1} {\r}is an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.14,0:00:0.16,Default,,0,0,0,,There {\1c&HFF00&\u1}i{\r}s an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.16,0:00:0.18,Default,,0,0,0,,There i{\1c&HFF00&\u1}s{\r} an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.18,0:00:0.22,Default,,0,0,0,,There is{\1c&HFF00&\u1} {\r}an additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.22,0:00:0.24,Default,,0,0,0,,There is {\1c&HFF00&\u1}a{\r}n additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.24,0:00:0.26,Default,,0,0,0,,There is a{\1c&HFF00&\u1}n{\r} additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.26,0:00:0.30,Default,,0,0,0,,There is an{\1c&HFF00&\u1} {\r}additional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.30,0:00:0.34,Default,,0,0,0,,There is an {\1c&HFF00&\u1}a{\r}dditional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.34,0:00:0.36,Default,,0,0,0,,There is an a{\1c&HFF00&\u1}d{\r}ditional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.36,0:00:0.42,Default,,0,0,0,,There is an ad{\1c&HFF00&\u1}d{\r}itional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.42,0:00:0.50,Default,,0,0,0,,There is an add{\1c&HFF00&\u1}i{\r}tional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.50,0:00:0.54,Default,,0,0,0,,There is an addi{\1c&HFF00&\u1}t{\r}ional reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.54,0:00:0.58,Default,,0,0,0,,There is an addit{\1c&HFF00&\u1}i{\r}onal reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.58,0:00:0.60,Default,,0,0,0,,There is an additi{\1c&HFF00&\u1}o{\r}nal reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.60,0:00:0.68,Default,,0,0,0,,There is an additio{\1c&HFF00&\u1}n{\r}al reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.68,0:00:0.70,Default,,0,0,0,,There is an addition{\1c&HFF00&\u1}a{\r}l reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.70,0:00:0.78,Default,,0,0,0,,There is an additiona{\1c&HFF00&\u1}l{\r} reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.78,0:00:0.86,Default,,0,0,0,,There is an additional{\1c&HFF00&\u1} {\r}reason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.86,0:00:0.96,Default,,0,0,0,,There is an additional {\1c&HFF00&\u1}r{\r}eason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.96,0:00:0.98,Default,,0,0,0,,There is an additional r{\1c&HFF00&\u1}e{\r}ason I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:0.98,0:00:1.04,Default,,0,0,0,,There is an additional re{\1c&HFF00&\u1}a{\r}son I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.04,0:00:1.12,Default,,0,0,0,,There is an additional rea{\1c&HFF00&\u1}s{\r}on I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.12,0:00:1.16,Default,,0,0,0,,There is an additional reas{\1c&HFF00&\u1}o{\r}n I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.16,0:00:1.22,Default,,0,0,0,,There is an additional reaso{\1c&HFF00&\u1}n{\r} I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.22,0:00:1.26,Default,,0,0,0,,There is an additional reason{\1c&HFF00&\u1} {\r}I've introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.26,0:00:1.36,Default,,0,0,0,,There is an additional reason {\1c&HFF00&\u1}I{\r}'ve introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.36,0:00:1.38,Default,,0,0,0,,There is an additional reason I{\1c&HFF00&\u1}'{\r}ve introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.38,0:00:1.40,Default,,0,0,0,,There is an additional reason I'{\1c&HFF00&\u1}v{\r}e introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.40,0:00:1.42,Default,,0,0,0,,There is an additional reason I'v{\1c&HFF00&\u1}e{\r} introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.42,0:00:1.46,Default,,0,0,0,,There is an additional reason I've{\1c&HFF00&\u1} {\r}introduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.46,0:00:1.48,Default,,0,0,0,,There is an additional reason I've {\1c&HFF00&\u1}i{\r}ntroduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.48,0:00:1.54,Default,,0,0,0,,There is an additional reason I've i{\1c&HFF00&\u1}n{\r}troduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.54,0:00:1.56,Default,,0,0,0,,There is an additional reason I've in{\1c&HFF00&\u1}t{\r}roduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.56,0:00:1.62,Default,,0,0,0,,There is an additional reason I've int{\1c&HFF00&\u1}r{\r}oduced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.62,0:00:1.66,Default,,0,0,0,,There is an additional reason I've intr{\1c&HFF00&\u1}o{\r}duced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.66,0:00:1.72,Default,,0,0,0,,There is an additional reason I've intro{\1c&HFF00&\u1}d{\r}uced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.72,0:00:1.76,Default,,0,0,0,,There is an additional reason I've introd{\1c&HFF00&\u1}u{\r}ced you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.76,0:00:1.80,Default,,0,0,0,,There is an additional reason I've introdu{\1c&HFF00&\u1}c{\r}ed you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.80,0:00:1.82,Default,,0,0,0,,There is an additional reason I've introduc{\1c&HFF00&\u1}e{\r}d you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.82,0:00:1.86,Default,,0,0,0,,There is an additional reason I've introduce{\1c&HFF00&\u1}d{\r} you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.86,0:00:1.90,Default,,0,0,0,,There is an additional reason I've introduced{\1c&HFF00&\u1} {\r}you to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.90,0:00:1.94,Default,,0,0,0,,There is an additional reason I've introduced {\1c&HFF00&\u1}y{\r}ou to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.94,0:00:1.96,Default,,0,0,0,,There is an additional reason I've introduced y{\1c&HFF00&\u1}o{\r}u to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:1.96,0:00:2.00,Default,,0,0,0,,There is an additional reason I've introduced yo{\1c&HFF00&\u1}u{\r} to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:2.00,0:00:2.04,Default,,0,0,0,,There is an additional reason I've introduced you{\1c&HFF00&\u1} {\r}to Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:2.04,0:00:2.08,Default,,0,0,0,,There is an additional reason I've introduced you {\1c&HFF00&\u1}t{\r}o Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:2.08,0:00:2.12,Default,,0,0,0,,There is an additional reason I've introduced you t{\1c&HFF00&\u1}o{\r} Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:2.12,0:00:2.16,Default,,0,0,0,,There is an additional reason I've introduced you to{\1c&HFF00&\u1} {\r}Mr. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:2.16,0:00:2.36,Default,,0,0,0,,There is an additional reason I've introduced you to {\1c&HFF00&\u1}M{\r}r. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:2.36,0:00:2.42,Default,,0,0,0,,There is an additional reason I've introduced you to M{\1c&HFF00&\u1}r{\r}. Tokiomi Tosaka here today.
+Dialogue: 0,0:00:2.42,0:00:2.48,Default,,0,0,0,,There is an additional reason I've introduced you to Mr.{\1c&HFF00&\u1} {\r}Tokiomi Tosaka here today.
+Dialogue: 0,0:00:2.48,0:00:2.58,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. {\1c&HFF00&\u1}T{\r}okiomi Tosaka here today.
+Dialogue: 0,0:00:2.58,0:00:2.66,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. T{\1c&HFF00&\u1}o{\r}kiomi Tosaka here today.
+Dialogue: 0,0:00:2.66,0:00:2.74,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. To{\1c&HFF00&\u1}k{\r}iomi Tosaka here today.
+Dialogue: 0,0:00:2.74,0:00:2.86,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tok{\1c&HFF00&\u1}i{\r}omi Tosaka here today.
+Dialogue: 0,0:00:2.86,0:00:2.96,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Toki{\1c&HFF00&\u1}o{\r}mi Tosaka here today.
+Dialogue: 0,0:00:2.96,0:00:3.02,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokio{\1c&HFF00&\u1}m{\r}i Tosaka here today.
+Dialogue: 0,0:00:3.02,0:00:3.10,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiom{\1c&HFF00&\u1}i{\r} Tosaka here today.
+Dialogue: 0,0:00:3.10,0:00:3.16,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi{\1c&HFF00&\u1} {\r}Tosaka here today.
+Dialogue: 0,0:00:3.16,0:00:3.28,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi {\1c&HFF00&\u1}T{\r}osaka here today.
+Dialogue: 0,0:00:3.28,0:00:3.38,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi T{\1c&HFF00&\u1}o{\r}saka here today.
+Dialogue: 0,0:00:3.38,0:00:3.48,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi To{\1c&HFF00&\u1}s{\r}aka here today.
+Dialogue: 0,0:00:3.48,0:00:3.56,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tos{\1c&HFF00&\u1}a{\r}ka here today.
+Dialogue: 0,0:00:3.56,0:00:3.70,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosa{\1c&HFF00&\u1}k{\r}a here today.
+Dialogue: 0,0:00:3.70,0:00:3.80,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosak{\1c&HFF00&\u1}a{\r} here today.
+Dialogue: 0,0:00:3.80,0:00:3.84,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka{\1c&HFF00&\u1} {\r}here today.
+Dialogue: 0,0:00:3.84,0:00:3.90,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka {\1c&HFF00&\u1}h{\r}ere today.
+Dialogue: 0,0:00:3.90,0:00:3.96,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka h{\1c&HFF00&\u1}e{\r}re today.
+Dialogue: 0,0:00:3.96,0:00:3.98,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka he{\1c&HFF00&\u1}r{\r}e today.
+Dialogue: 0,0:00:3.98,0:00:4.04,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka her{\1c&HFF00&\u1}e{\r} today.
+Dialogue: 0,0:00:4.04,0:00:4.08,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka here{\1c&HFF00&\u1} {\r}today.
+Dialogue: 0,0:00:4.08,0:00:4.16,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka here {\1c&HFF00&\u1}t{\r}oday.
+Dialogue: 0,0:00:4.16,0:00:4.22,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka here t{\1c&HFF00&\u1}o{\r}day.
+Dialogue: 0,0:00:4.22,0:00:4.34,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka here to{\1c&HFF00&\u1}d{\r}ay.
+Dialogue: 0,0:00:4.34,0:00:4.40,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka here tod{\1c&HFF00&\u1}a{\r}y.
+Dialogue: 0,0:00:4.40,0:00:4.48,Default,,0,0,0,,There is an additional reason I've introduced you to Mr. Tokiomi Tosaka here toda{\1c&HFF00&\u1}y{\r}.
+Dialogue: 0,0:00:4.48,0:00:5.44,Default,,0,0,0,,{\1c&HFF00&\u1} {\r}And what would that be?
+Dialogue: 0,0:00:5.44,0:00:5.46,Default,,0,0,0,,{\1c&HFF00&\u1}A{\r}nd what would that be?
+Dialogue: 0,0:00:5.46,0:00:5.50,Default,,0,0,0,,A{\1c&HFF00&\u1}n{\r}d what would that be?
+Dialogue: 0,0:00:5.50,0:00:5.56,Default,,0,0,0,,An{\1c&HFF00&\u1}d{\r} what would that be?
+Dialogue: 0,0:00:5.56,0:00:5.66,Default,,0,0,0,,And{\1c&HFF00&\u1} {\r}what would that be?
+Dialogue: 0,0:00:5.66,0:00:5.70,Default,,0,0,0,,And {\1c&HFF00&\u1}w{\r}hat would that be?
+Dialogue: 0,0:00:5.70,0:00:5.74,Default,,0,0,0,,And w{\1c&HFF00&\u1}h{\r}at would that be?
+Dialogue: 0,0:00:5.74,0:00:5.76,Default,,0,0,0,,And wh{\1c&HFF00&\u1}a{\r}t would that be?
+Dialogue: 0,0:00:5.76,0:00:5.80,Default,,0,0,0,,And wha{\1c&HFF00&\u1}t{\r} would that be?
+Dialogue: 0,0:00:5.80,0:00:5.84,Default,,0,0,0,,And what{\1c&HFF00&\u1} {\r}would that be?
+Dialogue: 0,0:00:5.84,0:00:5.88,Default,,0,0,0,,And what {\1c&HFF00&\u1}w{\r}ould that be?
+Dialogue: 0,0:00:5.88,0:00:5.92,Default,,0,0,0,,And what w{\1c&HFF00&\u1}o{\r}uld that be?
+Dialogue: 0,0:00:5.92,0:00:5.94,Default,,0,0,0,,And what wo{\1c&HFF00&\u1}u{\r}ld that be?
+Dialogue: 0,0:00:5.94,0:00:5.98,Default,,0,0,0,,And what wou{\1c&HFF00&\u1}l{\r}d that be?
+Dialogue: 0,0:00:5.98,0:00:6.02,Default,,0,0,0,,And what woul{\1c&HFF00&\u1}d{\r} that be?
+Dialogue: 0,0:00:6.02,0:00:6.06,Default,,0,0,0,,And what would{\1c&HFF00&\u1} {\r}that be?
+Dialogue: 0,0:00:6.06,0:00:6.08,Default,,0,0,0,,And what would {\1c&HFF00&\u1}t{\r}hat be?
+Dialogue: 0,0:00:6.08,0:00:6.14,Default,,0,0,0,,And what would t{\1c&HFF00&\u1}h{\r}at be?
+Dialogue: 0,0:00:6.14,0:00:6.18,Default,,0,0,0,,And what would th{\1c&HFF00&\u1}a{\r}t be?
+Dialogue: 0,0:00:6.18,0:00:6.24,Default,,0,0,0,,And what would tha{\1c&HFF00&\u1}t{\r} be?
+Dialogue: 0,0:00:6.24,0:00:6.30,Default,,0,0,0,,And what would that{\1c&HFF00&\u1} {\r}be?
+Dialogue: 0,0:00:6.30,0:00:6.40,Default,,0,0,0,,And what would that {\1c&HFF00&\u1}b{\r}e?
+Dialogue: 0,0:00:6.40,0:00:6.48,Default,,0,0,0,,And what would that b{\1c&HFF00&\u1}e{\r}?
+Dialogue: 0,0:00:6.48,0:00:7.20,Default,,0,0,0,,{\1c&HFF00&\u1} {\r}Actually, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.20,0:00:7.22,Default,,0,0,0,,{\1c&HFF00&\u1}A{\r}ctually, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.22,0:00:7.28,Default,,0,0,0,,A{\1c&HFF00&\u1}c{\r}tually, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.28,0:00:7.34,Default,,0,0,0,,Ac{\1c&HFF00&\u1}t{\r}ually, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.34,0:00:7.40,Default,,0,0,0,,Act{\1c&HFF00&\u1}u{\r}ally, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.40,0:00:7.42,Default,,0,0,0,,Actu{\1c&HFF00&\u1}a{\r}lly, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.42,0:00:7.52,Default,,0,0,0,,Actua{\1c&HFF00&\u1}l{\r}ly, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.52,0:00:7.56,Default,,0,0,0,,Actual{\1c&HFF00&\u1}l{\r}y, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.56,0:00:7.60,Default,,0,0,0,,Actuall{\1c&HFF00&\u1}y{\r}, we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:7.60,0:00:8.06,Default,,0,0,0,,Actually,{\1c&HFF00&\u1} {\r}we found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.06,0:00:8.10,Default,,0,0,0,,Actually, {\1c&HFF00&\u1}w{\r}e found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.10,0:00:8.18,Default,,0,0,0,,Actually, w{\1c&HFF00&\u1}e{\r} found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.18,0:00:8.22,Default,,0,0,0,,Actually, we{\1c&HFF00&\u1} {\r}found proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.22,0:00:8.30,Default,,0,0,0,,Actually, we {\1c&HFF00&\u1}f{\r}ound proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.30,0:00:8.32,Default,,0,0,0,,Actually, we f{\1c&HFF00&\u1}o{\r}und proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.32,0:00:8.36,Default,,0,0,0,,Actually, we fo{\1c&HFF00&\u1}u{\r}nd proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.36,0:00:8.40,Default,,0,0,0,,Actually, we fou{\1c&HFF00&\u1}n{\r}d proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.40,0:00:8.44,Default,,0,0,0,,Actually, we foun{\1c&HFF00&\u1}d{\r} proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.44,0:00:8.50,Default,,0,0,0,,Actually, we found{\1c&HFF00&\u1} {\r}proof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.50,0:00:8.54,Default,,0,0,0,,Actually, we found {\1c&HFF00&\u1}p{\r}roof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.54,0:00:8.58,Default,,0,0,0,,Actually, we found p{\1c&HFF00&\u1}r{\r}oof a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.58,0:00:8.66,Default,,0,0,0,,Actually, we found pr{\1c&HFF00&\u1}o{\r}of a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.66,0:00:8.70,Default,,0,0,0,,Actually, we found pro{\1c&HFF00&\u1}o{\r}f a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.70,0:00:8.76,Default,,0,0,0,,Actually, we found proo{\1c&HFF00&\u1}f{\r} a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.76,0:00:8.80,Default,,0,0,0,,Actually, we found proof{\1c&HFF00&\u1} {\r}a long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.80,0:00:8.82,Default,,0,0,0,,Actually, we found proof {\1c&HFF00&\u1}a{\r} long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.82,0:00:8.88,Default,,0,0,0,,Actually, we found proof a{\1c&HFF00&\u1} {\r}long time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.88,0:00:8.96,Default,,0,0,0,,Actually, we found proof a {\1c&HFF00&\u1}l{\r}ong time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.96,0:00:8.98,Default,,0,0,0,,Actually, we found proof a l{\1c&HFF00&\u1}o{\r}ng time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:8.98,0:00:9.02,Default,,0,0,0,,Actually, we found proof a lo{\1c&HFF00&\u1}n{\r}g time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.02,0:00:9.08,Default,,0,0,0,,Actually, we found proof a lon{\1c&HFF00&\u1}g{\r} time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.08,0:00:9.14,Default,,0,0,0,,Actually, we found proof a long{\1c&HFF00&\u1} {\r}time ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.14,0:00:9.26,Default,,0,0,0,,Actually, we found proof a long {\1c&HFF00&\u1}t{\r}ime ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.26,0:00:9.30,Default,,0,0,0,,Actually, we found proof a long t{\1c&HFF00&\u1}i{\r}me ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.30,0:00:9.32,Default,,0,0,0,,Actually, we found proof a long ti{\1c&HFF00&\u1}m{\r}e ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.32,0:00:9.36,Default,,0,0,0,,Actually, we found proof a long tim{\1c&HFF00&\u1}e{\r} ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.36,0:00:9.42,Default,,0,0,0,,Actually, we found proof a long time{\1c&HFF00&\u1} {\r}ago that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.42,0:00:9.46,Default,,0,0,0,,Actually, we found proof a long time {\1c&HFF00&\u1}a{\r}go that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.46,0:00:9.56,Default,,0,0,0,,Actually, we found proof a long time a{\1c&HFF00&\u1}g{\r}o that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.56,0:00:9.64,Default,,0,0,0,,Actually, we found proof a long time ag{\1c&HFF00&\u1}o{\r} that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.64,0:00:9.82,Default,,0,0,0,,Actually, we found proof a long time ago{\1c&HFF00&\u1} {\r}that the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.82,0:00:9.86,Default,,0,0,0,,Actually, we found proof a long time ago {\1c&HFF00&\u1}t{\r}hat the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.86,0:00:9.88,Default,,0,0,0,,Actually, we found proof a long time ago t{\1c&HFF00&\u1}h{\r}at the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.88,0:00:9.92,Default,,0,0,0,,Actually, we found proof a long time ago th{\1c&HFF00&\u1}a{\r}t the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.92,0:00:9.94,Default,,0,0,0,,Actually, we found proof a long time ago tha{\1c&HFF00&\u1}t{\r} the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.94,0:00:9.96,Default,,0,0,0,,Actually, we found proof a long time ago that{\1c&HFF00&\u1} {\r}the Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:9.96,0:00:10.00,Default,,0,0,0,,Actually, we found proof a long time ago that {\1c&HFF00&\u1}t{\r}he Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.00,0:00:10.02,Default,,0,0,0,,Actually, we found proof a long time ago that t{\1c&HFF00&\u1}h{\r}e Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.02,0:00:10.06,Default,,0,0,0,,Actually, we found proof a long time ago that th{\1c&HFF00&\u1}e{\r} Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.06,0:00:10.12,Default,,0,0,0,,Actually, we found proof a long time ago that the{\1c&HFF00&\u1} {\r}Holy Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.12,0:00:10.16,Default,,0,0,0,,Actually, we found proof a long time ago that the {\1c&HFF00&\u1}H{\r}oly Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.16,0:00:10.24,Default,,0,0,0,,Actually, we found proof a long time ago that the H{\1c&HFF00&\u1}o{\r}ly Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.24,0:00:10.28,Default,,0,0,0,,Actually, we found proof a long time ago that the Ho{\1c&HFF00&\u1}l{\r}y Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.28,0:00:10.32,Default,,0,0,0,,Actually, we found proof a long time ago that the Hol{\1c&HFF00&\u1}y{\r} Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.32,0:00:10.36,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy{\1c&HFF00&\u1} {\r}Grail that will appear in Fuyuki
+Dialogue: 0,0:00:10.36,0:00:10.44,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy {\1c&HFF00&\u1}G{\r}rail that will appear in Fuyuki
+Dialogue: 0,0:00:10.44,0:00:10.55,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy G{\1c&HFF00&\u1}r{\r}ail that will appear in Fuyuki
+Dialogue: 0,0:00:10.55,0:00:10.57,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Gr{\1c&HFF00&\u1}a{\r}il that will appear in Fuyuki
+Dialogue: 0,0:00:10.57,0:00:10.63,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Gra{\1c&HFF00&\u1}i{\r}l that will appear in Fuyuki
+Dialogue: 0,0:00:10.63,0:00:10.69,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grai{\1c&HFF00&\u1}l{\r} that will appear in Fuyuki
+Dialogue: 0,0:00:10.69,0:00:10.71,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail{\1c&HFF00&\u1} {\r}that will appear in Fuyuki
+Dialogue: 0,0:00:10.71,0:00:10.75,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail {\1c&HFF00&\u1}t{\r}hat will appear in Fuyuki
+Dialogue: 0,0:00:10.75,0:00:10.77,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail t{\1c&HFF00&\u1}h{\r}at will appear in Fuyuki
+Dialogue: 0,0:00:10.77,0:00:10.79,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail th{\1c&HFF00&\u1}a{\r}t will appear in Fuyuki
+Dialogue: 0,0:00:10.79,0:00:10.81,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail tha{\1c&HFF00&\u1}t{\r} will appear in Fuyuki
+Dialogue: 0,0:00:10.81,0:00:10.85,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that{\1c&HFF00&\u1} {\r}will appear in Fuyuki
+Dialogue: 0,0:00:10.85,0:00:10.87,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that {\1c&HFF00&\u1}w{\r}ill appear in Fuyuki
+Dialogue: 0,0:00:10.87,0:00:10.89,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that w{\1c&HFF00&\u1}i{\r}ll appear in Fuyuki
+Dialogue: 0,0:00:10.89,0:00:10.95,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that wi{\1c&HFF00&\u1}l{\r}l appear in Fuyuki
+Dialogue: 0,0:00:10.95,0:00:10.97,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that wil{\1c&HFF00&\u1}l{\r} appear in Fuyuki
+Dialogue: 0,0:00:10.97,0:00:11.01,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will{\1c&HFF00&\u1} {\r}appear in Fuyuki
+Dialogue: 0,0:00:11.01,0:00:11.03,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will {\1c&HFF00&\u1}a{\r}ppear in Fuyuki
+Dialogue: 0,0:00:11.03,0:00:11.09,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will a{\1c&HFF00&\u1}p{\r}pear in Fuyuki
+Dialogue: 0,0:00:11.09,0:00:11.15,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will ap{\1c&HFF00&\u1}p{\r}ear in Fuyuki
+Dialogue: 0,0:00:11.15,0:00:11.19,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will app{\1c&HFF00&\u1}e{\r}ar in Fuyuki
+Dialogue: 0,0:00:11.19,0:00:11.21,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appe{\1c&HFF00&\u1}a{\r}r in Fuyuki
+Dialogue: 0,0:00:11.21,0:00:11.29,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appea{\1c&HFF00&\u1}r{\r} in Fuyuki
+Dialogue: 0,0:00:11.29,0:00:11.31,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear{\1c&HFF00&\u1} {\r}in Fuyuki
+Dialogue: 0,0:00:11.31,0:00:11.33,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear {\1c&HFF00&\u1}i{\r}n Fuyuki
+Dialogue: 0,0:00:11.33,0:00:11.37,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear i{\1c&HFF00&\u1}n{\r} Fuyuki
+Dialogue: 0,0:00:11.37,0:00:11.45,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear in{\1c&HFF00&\u1} {\r}Fuyuki
+Dialogue: 0,0:00:11.45,0:00:11.55,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear in {\1c&HFF00&\u1}F{\r}uyuki
+Dialogue: 0,0:00:11.55,0:00:11.65,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear in F{\1c&HFF00&\u1}u{\r}yuki
+Dialogue: 0,0:00:11.65,0:00:11.75,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear in Fu{\1c&HFF00&\u1}y{\r}uki
+Dialogue: 0,0:00:11.75,0:00:11.85,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear in Fuy{\1c&HFF00&\u1}u{\r}ki
+Dialogue: 0,0:00:11.85,0:00:11.93,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear in Fuyu{\1c&HFF00&\u1}k{\r}i
+Dialogue: 0,0:00:11.93,0:00:12.03,Default,,0,0,0,,Actually, we found proof a long time ago that the Holy Grail that will appear in Fuyuk{\1c&HFF00&\u1}i{\r}
+Dialogue: 0,0:00:12.03,0:00:12.41,Default,,0,0,0,,{\1c&HFF00&\u1} {\r}is not the sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.41,0:00:12.45,Default,,0,0,0,,{\1c&HFF00&\u1}i{\r}s not the sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.45,0:00:12.51,Default,,0,0,0,,i{\1c&HFF00&\u1}s{\r} not the sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.51,0:00:12.57,Default,,0,0,0,,is{\1c&HFF00&\u1} {\r}not the sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.57,0:00:12.65,Default,,0,0,0,,is {\1c&HFF00&\u1}n{\r}ot the sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.65,0:00:12.71,Default,,0,0,0,,is n{\1c&HFF00&\u1}o{\r}t the sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.71,0:00:12.75,Default,,0,0,0,,is no{\1c&HFF00&\u1}t{\r} the sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.75,0:00:12.79,Default,,0,0,0,,is not{\1c&HFF00&\u1} {\r}the sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.79,0:00:12.81,Default,,0,0,0,,is not {\1c&HFF00&\u1}t{\r}he sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.81,0:00:12.85,Default,,0,0,0,,is not t{\1c&HFF00&\u1}h{\r}e sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.85,0:00:12.89,Default,,0,0,0,,is not th{\1c&HFF00&\u1}e{\r} sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.89,0:00:12.93,Default,,0,0,0,,is not the{\1c&HFF00&\u1} {\r}sacred relic that belonged to the Son of God.
+Dialogue: 0,0:00:12.93,0:00:13.03,Default,,0,0,0,,is not the {\1c&HFF00&\u1}s{\r}acred relic that belonged to the Son of God.
+Dialogue: 0,0:00:13.03,0:00:13.07,Default,,0,0,0,,is not the s{\1c&HFF00&\u1}a{\r}cred relic that belonged to the Son of God.
+Dialogue: 0,0:00:13.07,0:00:13.13,Default,,0,0,0,,is not the sa{\1c&HFF00&\u1}c{\r}red relic that belonged to the Son of God.
+Dialogue: 0,0:00:13.13,0:00:13.15,Default,,0,0,0,,is not the sac{\1c&HFF00&\u1}r{\r}ed relic that belonged to the Son of God.
+Dialogue: 0,0:00:13.15,0:00:13.19,Default,,0,0,0,,is not the sacr{\1c&HFF00&\u1}e{\r}d relic that belonged to the Son of God.
+Dialogue: 0,0:00:13.19,0:00:13.23,Default,,0,0,0,,is not the sacre{\1c&HFF00&\u1}d{\r} relic that belonged to the Son of God.
+Dialogue: 0,0:00:13.23,0:00:13.29,Default,,0,0,0,,is not the sacred{\1c&HFF00&\u1} {\r}relic that belonged to the Son of God.
+Dialogue: 0,0:00:13.29,0:00:13.35,Default,,0,0,0,,is not the sacred {\1c&HFF00&\u1}r{\r}elic that belonged to the Son of God.
+Dialogue: 0,0:00:13.35,0:00:13.41,Default,,0,0,0,,is not the sacred r{\1c&HFF00&\u1}e{\r}lic that belonged to the Son of God.
+Dialogue: 0,0:00:13.41,0:00:13.47,Default,,0,0,0,,is not the sacred re{\1c&HFF00&\u1}l{\r}ic that belonged to the Son of God.
+Dialogue: 0,0:00:13.47,0:00:13.49,Default,,0,0,0,,is not the sacred rel{\1c&HFF00&\u1}i{\r}c that belonged to the Son of God.
+Dialogue: 0,0:00:13.49,0:00:13.57,Default,,0,0,0,,is not the sacred reli{\1c&HFF00&\u1}c{\r} that belonged to the Son of God.
+Dialogue: 0,0:00:13.57,0:00:13.61,Default,,0,0,0,,is not the sacred relic{\1c&HFF00&\u1} {\r}that belonged to the Son of God.
+Dialogue: 0,0:00:13.61,0:00:13.65,Default,,0,0,0,,is not the sacred relic {\1c&HFF00&\u1}t{\r}hat belonged to the Son of God.
+Dialogue: 0,0:00:13.65,0:00:13.67,Default,,0,0,0,,is not the sacred relic t{\1c&HFF00&\u1}h{\r}at belonged to the Son of God.
+Dialogue: 0,0:00:13.67,0:00:13.69,Default,,0,0,0,,is not the sacred relic th{\1c&HFF00&\u1}a{\r}t belonged to the Son of God.
+Dialogue: 0,0:00:13.69,0:00:13.73,Default,,0,0,0,,is not the sacred relic tha{\1c&HFF00&\u1}t{\r} belonged to the Son of God.
+Dialogue: 0,0:00:13.73,0:00:13.77,Default,,0,0,0,,is not the sacred relic that{\1c&HFF00&\u1} {\r}belonged to the Son of God.
+Dialogue: 0,0:00:13.77,0:00:13.83,Default,,0,0,0,,is not the sacred relic that {\1c&HFF00&\u1}b{\r}elonged to the Son of God.
+Dialogue: 0,0:00:13.83,0:00:13.91,Default,,0,0,0,,is not the sacred relic that b{\1c&HFF00&\u1}e{\r}longed to the Son of God.
+Dialogue: 0,0:00:13.91,0:00:13.99,Default,,0,0,0,,is not the sacred relic that be{\1c&HFF00&\u1}l{\r}onged to the Son of God.
+Dialogue: 0,0:00:13.99,0:00:14.03,Default,,0,0,0,,is not the sacred relic that bel{\1c&HFF00&\u1}o{\r}nged to the Son of God.
+Dialogue: 0,0:00:14.03,0:00:14.07,Default,,0,0,0,,is not the sacred relic that belo{\1c&HFF00&\u1}n{\r}ged to the Son of God.
+Dialogue: 0,0:00:14.07,0:00:14.11,Default,,0,0,0,,is not the sacred relic that belon{\1c&HFF00&\u1}g{\r}ed to the Son of God.
+Dialogue: 0,0:00:14.11,0:00:14.13,Default,,0,0,0,,is not the sacred relic that belong{\1c&HFF00&\u1}e{\r}d to the Son of God.
+Dialogue: 0,0:00:14.13,0:00:14.17,Default,,0,0,0,,is not the sacred relic that belonge{\1c&HFF00&\u1}d{\r} to the Son of God.
+Dialogue: 0,0:00:14.17,0:00:14.21,Default,,0,0,0,,is not the sacred relic that belonged{\1c&HFF00&\u1} {\r}to the Son of God.
+Dialogue: 0,0:00:14.21,0:00:14.23,Default,,0,0,0,,is not the sacred relic that belonged {\1c&HFF00&\u1}t{\r}o the Son of God.
+Dialogue: 0,0:00:14.23,0:00:14.27,Default,,0,0,0,,is not the sacred relic that belonged t{\1c&HFF00&\u1}o{\r} the Son of God.
+Dialogue: 0,0:00:14.27,0:00:14.31,Default,,0,0,0,,is not the sacred relic that belonged to{\1c&HFF00&\u1} {\r}the Son of God.
+Dialogue: 0,0:00:14.31,0:00:14.33,Default,,0,0,0,,is not the sacred relic that belonged to {\1c&HFF00&\u1}t{\r}he Son of God.
+Dialogue: 0,0:00:14.33,0:00:14.35,Default,,0,0,0,,is not the sacred relic that belonged to t{\1c&HFF00&\u1}h{\r}e Son of God.
+Dialogue: 0,0:00:14.35,0:00:14.39,Default,,0,0,0,,is not the sacred relic that belonged to th{\1c&HFF00&\u1}e{\r} Son of God.
+Dialogue: 0,0:00:14.39,0:00:14.43,Default,,0,0,0,,is not the sacred relic that belonged to the{\1c&HFF00&\u1} {\r}Son of God.
+Dialogue: 0,0:00:14.43,0:00:14.51,Default,,0,0,0,,is not the sacred relic that belonged to the {\1c&HFF00&\u1}S{\r}on of God.
+Dialogue: 0,0:00:14.51,0:00:14.53,Default,,0,0,0,,is not the sacred relic that belonged to the S{\1c&HFF00&\u1}o{\r}n of God.
+Dialogue: 0,0:00:14.53,0:00:14.61,Default,,0,0,0,,is not the sacred relic that belonged to the So{\1c&HFF00&\u1}n{\r} of God.
+Dialogue: 0,0:00:14.61,0:00:14.63,Default,,0,0,0,,is not the sacred relic that belonged to the Son{\1c&HFF00&\u1} {\r}of God.
+Dialogue: 0,0:00:14.63,0:00:14.65,Default,,0,0,0,,is not the sacred relic that belonged to the Son {\1c&HFF00&\u1}o{\r}f God.
+Dialogue: 0,0:00:14.65,0:00:14.69,Default,,0,0,0,,is not the sacred relic that belonged to the Son o{\1c&HFF00&\u1}f{\r} God.
+Dialogue: 0,0:00:14.69,0:00:14.75,Default,,0,0,0,,is not the sacred relic that belonged to the Son of{\1c&HFF00&\u1} {\r}God.
+Dialogue: 0,0:00:14.75,0:00:14.95,Default,,0,0,0,,is not the sacred relic that belonged to the Son of {\1c&HFF00&\u1}G{\r}od.
+Dialogue: 0,0:00:14.95,0:00:15.01,Default,,0,0,0,,is not the sacred relic that belonged to the Son of G{\1c&HFF00&\u1}o{\r}d.
+Dialogue: 0,0:00:15.01,0:00:15.05,Default,,0,0,0,,is not the sacred relic that belonged to the Son of Go{\1c&HFF00&\u1}d{\r}.
+Dialogue: 0,0:00:15.05,0:00:16.25,Default,,0,0,0,,{\1c&HFF00&\u1} {\r}So I gathered.
+Dialogue: 0,0:00:16.25,0:00:16.35,Default,,0,0,0,,{\1c&HFF00&\u1}S{\r}o I gathered.
+Dialogue: 0,0:00:16.35,0:00:16.43,Default,,0,0,0,,S{\1c&HFF00&\u1}o{\r} I gathered.
+Dialogue: 0,0:00:16.43,0:00:16.51,Default,,0,0,0,,So{\1c&HFF00&\u1} {\r}I gathered.
+Dialogue: 0,0:00:16.51,0:00:16.57,Default,,0,0,0,,So {\1c&HFF00&\u1}I{\r} gathered.
+Dialogue: 0,0:00:16.57,0:00:16.65,Default,,0,0,0,,So I{\1c&HFF00&\u1} {\r}gathered.
+Dialogue: 0,0:00:16.65,0:00:16.81,Default,,0,0,0,,So I {\1c&HFF00&\u1}g{\r}athered.
+Dialogue: 0,0:00:16.81,0:00:16.87,Default,,0,0,0,,So I g{\1c&HFF00&\u1}a{\r}thered.
+Dialogue: 0,0:00:16.87,0:00:16.89,Default,,0,0,0,,So I ga{\1c&HFF00&\u1}t{\r}hered.
+Dialogue: 0,0:00:16.89,0:00:16.93,Default,,0,0,0,,So I gat{\1c&HFF00&\u1}h{\r}ered.
+Dialogue: 0,0:00:16.93,0:00:16.97,Default,,0,0,0,,So I gath{\1c&HFF00&\u1}e{\r}red.
+Dialogue: 0,0:00:16.97,0:00:17.01,Default,,0,0,0,,So I gathe{\1c&HFF00&\u1}r{\r}ed.
+Dialogue: 0,0:00:17.01,0:00:17.03,Default,,0,0,0,,So I gather{\1c&HFF00&\u1}e{\r}d.
+Dialogue: 0,0:00:17.03,0:00:17.07,Default,,0,0,0,,So I gathere{\1c&HFF00&\u1}d{\r}.
+Dialogue: 0,0:00:17.07,0:00:17.75,Default,,0,0,0,,{\1c&HFF00&\u1} {\r}Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:17.75,0:00:17.79,Default,,0,0,0,,{\1c&HFF00&\u1}O{\r}therwise, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:17.79,0:00:17.81,Default,,0,0,0,,O{\1c&HFF00&\u1}t{\r}herwise, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:17.81,0:00:17.85,Default,,0,0,0,,Ot{\1c&HFF00&\u1}h{\r}erwise, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:17.85,0:00:17.89,Default,,0,0,0,,Oth{\1c&HFF00&\u1}e{\r}rwise, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:17.89,0:00:17.97,Default,,0,0,0,,Othe{\1c&HFF00&\u1}r{\r}wise, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:17.97,0:00:18.15,Default,,0,0,0,,Other{\1c&HFF00&\u1}w{\r}ise, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.15,0:00:18.19,Default,,0,0,0,,Otherw{\1c&HFF00&\u1}i{\r}se, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.19,0:00:18.23,Default,,0,0,0,,Otherwi{\1c&HFF00&\u1}s{\r}e, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.23,0:00:18.29,Default,,0,0,0,,Otherwis{\1c&HFF00&\u1}e{\r}, in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.29,0:00:18.75,Default,,0,0,0,,Otherwise,{\1c&HFF00&\u1} {\r}in order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.75,0:00:18.77,Default,,0,0,0,,Otherwise, {\1c&HFF00&\u1}i{\r}n order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.77,0:00:18.83,Default,,0,0,0,,Otherwise, i{\1c&HFF00&\u1}n{\r} order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.83,0:00:18.93,Default,,0,0,0,,Otherwise, in{\1c&HFF00&\u1} {\r}order to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.93,0:00:18.97,Default,,0,0,0,,Otherwise, in {\1c&HFF00&\u1}o{\r}rder to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:18.97,0:00:19.01,Default,,0,0,0,,Otherwise, in o{\1c&HFF00&\u1}r{\r}der to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.01,0:00:19.05,Default,,0,0,0,,Otherwise, in or{\1c&HFF00&\u1}d{\r}er to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.05,0:00:19.07,Default,,0,0,0,,Otherwise, in ord{\1c&HFF00&\u1}e{\r}r to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.07,0:00:19.13,Default,,0,0,0,,Otherwise, in orde{\1c&HFF00&\u1}r{\r} to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.13,0:00:19.17,Default,,0,0,0,,Otherwise, in order{\1c&HFF00&\u1} {\r}to retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.17,0:00:19.21,Default,,0,0,0,,Otherwise, in order {\1c&HFF00&\u1}t{\r}o retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.21,0:00:19.25,Default,,0,0,0,,Otherwise, in order t{\1c&HFF00&\u1}o{\r} retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.25,0:00:19.31,Default,,0,0,0,,Otherwise, in order to{\1c&HFF00&\u1} {\r}retrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.31,0:00:19.37,Default,,0,0,0,,Otherwise, in order to {\1c&HFF00&\u1}r{\r}etrieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.37,0:00:19.45,Default,,0,0,0,,Otherwise, in order to r{\1c&HFF00&\u1}e{\r}trieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.45,0:00:19.51,Default,,0,0,0,,Otherwise, in order to re{\1c&HFF00&\u1}t{\r}rieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.51,0:00:19.59,Default,,0,0,0,,Otherwise, in order to ret{\1c&HFF00&\u1}r{\r}ieve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.59,0:00:19.61,Default,,0,0,0,,Otherwise, in order to retr{\1c&HFF00&\u1}i{\r}eve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.61,0:00:19.65,Default,,0,0,0,,Otherwise, in order to retri{\1c&HFF00&\u1}e{\r}ve it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.65,0:00:19.67,Default,,0,0,0,,Otherwise, in order to retrie{\1c&HFF00&\u1}v{\r}e it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.67,0:00:19.71,Default,,0,0,0,,Otherwise, in order to retriev{\1c&HFF00&\u1}e{\r} it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.71,0:00:19.75,Default,,0,0,0,,Otherwise, in order to retrieve{\1c&HFF00&\u1} {\r}it would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.75,0:00:19.77,Default,,0,0,0,,Otherwise, in order to retrieve {\1c&HFF00&\u1}i{\r}t would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.77,0:00:19.79,Default,,0,0,0,,Otherwise, in order to retrieve i{\1c&HFF00&\u1}t{\r} would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.79,0:00:19.83,Default,,0,0,0,,Otherwise, in order to retrieve it{\1c&HFF00&\u1} {\r}would have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.83,0:00:19.85,Default,,0,0,0,,Otherwise, in order to retrieve it {\1c&HFF00&\u1}w{\r}ould have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.85,0:00:19.87,Default,,0,0,0,,Otherwise, in order to retrieve it w{\1c&HFF00&\u1}o{\r}uld have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.87,0:00:19.89,Default,,0,0,0,,Otherwise, in order to retrieve it wo{\1c&HFF00&\u1}u{\r}ld have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.89,0:00:19.93,Default,,0,0,0,,Otherwise, in order to retrieve it wou{\1c&HFF00&\u1}l{\r}d have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.93,0:00:19.95,Default,,0,0,0,,Otherwise, in order to retrieve it woul{\1c&HFF00&\u1}d{\r} have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.95,0:00:19.97,Default,,0,0,0,,Otherwise, in order to retrieve it would{\1c&HFF00&\u1} {\r}have been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.97,0:00:19.99,Default,,0,0,0,,Otherwise, in order to retrieve it would {\1c&HFF00&\u1}h{\r}ave been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:19.99,0:00:20.01,Default,,0,0,0,,Otherwise, in order to retrieve it would h{\1c&HFF00&\u1}a{\r}ve been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.01,0:00:20.03,Default,,0,0,0,,Otherwise, in order to retrieve it would ha{\1c&HFF00&\u1}v{\r}e been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.03,0:00:20.05,Default,,0,0,0,,Otherwise, in order to retrieve it would hav{\1c&HFF00&\u1}e{\r} been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.05,0:00:20.07,Default,,0,0,0,,Otherwise, in order to retrieve it would have{\1c&HFF00&\u1} {\r}been given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.07,0:00:20.09,Default,,0,0,0,,Otherwise, in order to retrieve it would have {\1c&HFF00&\u1}b{\r}een given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.09,0:00:20.15,Default,,0,0,0,,Otherwise, in order to retrieve it would have b{\1c&HFF00&\u1}e{\r}en given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.15,0:00:20.17,Default,,0,0,0,,Otherwise, in order to retrieve it would have be{\1c&HFF00&\u1}e{\r}n given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.17,0:00:20.21,Default,,0,0,0,,Otherwise, in order to retrieve it would have bee{\1c&HFF00&\u1}n{\r} given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.21,0:00:20.23,Default,,0,0,0,,Otherwise, in order to retrieve it would have been{\1c&HFF00&\u1} {\r}given to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.23,0:00:20.27,Default,,0,0,0,,Otherwise, in order to retrieve it would have been {\1c&HFF00&\u1}g{\r}iven to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.27,0:00:20.31,Default,,0,0,0,,Otherwise, in order to retrieve it would have been g{\1c&HFF00&\u1}i{\r}ven to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.31,0:00:20.37,Default,,0,0,0,,Otherwise, in order to retrieve it would have been gi{\1c&HFF00&\u1}v{\r}en to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.37,0:00:20.39,Default,,0,0,0,,Otherwise, in order to retrieve it would have been giv{\1c&HFF00&\u1}e{\r}n to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.39,0:00:20.45,Default,,0,0,0,,Otherwise, in order to retrieve it would have been give{\1c&HFF00&\u1}n{\r} to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.45,0:00:20.49,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given{\1c&HFF00&\u1} {\r}to us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.49,0:00:20.53,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given {\1c&HFF00&\u1}t{\r}o us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.53,0:00:20.57,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given t{\1c&HFF00&\u1}o{\r} us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.57,0:00:20.79,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to{\1c&HFF00&\u1} {\r}us of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.79,0:00:20.85,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to {\1c&HFF00&\u1}u{\r}s of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.85,0:00:20.93,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to u{\1c&HFF00&\u1}s{\r} of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:20.93,0:00:21.03,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us{\1c&HFF00&\u1} {\r}of the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:21.03,0:00:21.05,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us {\1c&HFF00&\u1}o{\r}f the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:21.05,0:00:21.09,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us o{\1c&HFF00&\u1}f{\r} the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:21.09,0:00:21.13,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of{\1c&HFF00&\u1} {\r}the Eighth Sacrament Assembly.
+Dialogue: 0,0:00:21.13,0:00:21.15,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of {\1c&HFF00&\u1}t{\r}he Eighth Sacrament Assembly.
+Dialogue: 0,0:00:21.15,0:00:21.19,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of t{\1c&HFF00&\u1}h{\r}e Eighth Sacrament Assembly.
+Dialogue: 0,0:00:21.19,0:00:21.23,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of th{\1c&HFF00&\u1}e{\r} Eighth Sacrament Assembly.
+Dialogue: 0,0:00:21.23,0:00:21.31,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the{\1c&HFF00&\u1} {\r}Eighth Sacrament Assembly.
+Dialogue: 0,0:00:21.31,0:00:21.33,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the {\1c&HFF00&\u1}E{\r}ighth Sacrament Assembly.
+Dialogue: 0,0:00:21.33,0:00:21.37,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the E{\1c&HFF00&\u1}i{\r}ghth Sacrament Assembly.
+Dialogue: 0,0:00:21.37,0:00:21.39,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Ei{\1c&HFF00&\u1}g{\r}hth Sacrament Assembly.
+Dialogue: 0,0:00:21.39,0:00:21.43,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eig{\1c&HFF00&\u1}h{\r}th Sacrament Assembly.
+Dialogue: 0,0:00:21.43,0:00:21.45,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eigh{\1c&HFF00&\u1}t{\r}h Sacrament Assembly.
+Dialogue: 0,0:00:21.45,0:00:21.53,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eight{\1c&HFF00&\u1}h{\r} Sacrament Assembly.
+Dialogue: 0,0:00:21.53,0:00:21.59,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth{\1c&HFF00&\u1} {\r}Sacrament Assembly.
+Dialogue: 0,0:00:21.59,0:00:21.69,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth {\1c&HFF00&\u1}S{\r}acrament Assembly.
+Dialogue: 0,0:00:21.69,0:00:21.77,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth S{\1c&HFF00&\u1}a{\r}crament Assembly.
+Dialogue: 0,0:00:21.77,0:00:21.81,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sa{\1c&HFF00&\u1}c{\r}rament Assembly.
+Dialogue: 0,0:00:21.81,0:00:21.85,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sac{\1c&HFF00&\u1}r{\r}ament Assembly.
+Dialogue: 0,0:00:21.85,0:00:21.91,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacr{\1c&HFF00&\u1}a{\r}ment Assembly.
+Dialogue: 0,0:00:21.91,0:00:21.95,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacra{\1c&HFF00&\u1}m{\r}ent Assembly.
+Dialogue: 0,0:00:21.95,0:00:21.97,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacram{\1c&HFF00&\u1}e{\r}nt Assembly.
+Dialogue: 0,0:00:21.97,0:00:22.01,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrame{\1c&HFF00&\u1}n{\r}t Assembly.
+Dialogue: 0,0:00:22.01,0:00:22.07,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacramen{\1c&HFF00&\u1}t{\r} Assembly.
+Dialogue: 0,0:00:22.07,0:00:22.13,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament{\1c&HFF00&\u1} {\r}Assembly.
+Dialogue: 0,0:00:22.13,0:00:22.15,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament {\1c&HFF00&\u1}A{\r}ssembly.
+Dialogue: 0,0:00:22.15,0:00:22.25,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament A{\1c&HFF00&\u1}s{\r}sembly.
+Dialogue: 0,0:00:22.25,0:00:22.35,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament As{\1c&HFF00&\u1}s{\r}embly.
+Dialogue: 0,0:00:22.35,0:00:22.37,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament Ass{\1c&HFF00&\u1}e{\r}mbly.
+Dialogue: 0,0:00:22.37,0:00:22.43,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament Asse{\1c&HFF00&\u1}m{\r}bly.
+Dialogue: 0,0:00:22.43,0:00:22.51,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament Assem{\1c&HFF00&\u1}b{\r}ly.
+Dialogue: 0,0:00:22.51,0:00:22.59,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament Assemb{\1c&HFF00&\u1}l{\r}y.
+Dialogue: 0,0:00:22.59,0:00:22.61,Default,,0,0,0,,Otherwise, in order to retrieve it would have been given to us of the Eighth Sacrament Assembl{\1c&HFF00&\u1}y{\r}.
+Dialogue: 0,0:00:23.39,0:00:23.43,Default,,0,0,0,,{\1c&HFF00&\u1}B{\r}e that as it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.43,0:00:23.51,Default,,0,0,0,,B{\1c&HFF00&\u1}e{\r} that as it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.51,0:00:23.55,Default,,0,0,0,,Be{\1c&HFF00&\u1} {\r}that as it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.55,0:00:23.57,Default,,0,0,0,,Be {\1c&HFF00&\u1}t{\r}hat as it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.57,0:00:23.63,Default,,0,0,0,,Be t{\1c&HFF00&\u1}h{\r}at as it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.63,0:00:23.67,Default,,0,0,0,,Be th{\1c&HFF00&\u1}a{\r}t as it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.67,0:00:23.71,Default,,0,0,0,,Be tha{\1c&HFF00&\u1}t{\r} as it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.71,0:00:23.77,Default,,0,0,0,,Be that{\1c&HFF00&\u1} {\r}as it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.77,0:00:23.81,Default,,0,0,0,,Be that {\1c&HFF00&\u1}a{\r}s it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.81,0:00:23.85,Default,,0,0,0,,Be that a{\1c&HFF00&\u1}s{\r} it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.85,0:00:23.93,Default,,0,0,0,,Be that as{\1c&HFF00&\u1} {\r}it may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.93,0:00:23.95,Default,,0,0,0,,Be that as {\1c&HFF00&\u1}i{\r}t may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.95,0:00:23.97,Default,,0,0,0,,Be that as i{\1c&HFF00&\u1}t{\r} may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:23.97,0:00:24.03,Default,,0,0,0,,Be that as it{\1c&HFF00&\u1} {\r}may, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.03,0:00:24.19,Default,,0,0,0,,Be that as it {\1c&HFF00&\u1}m{\r}ay, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.19,0:00:24.23,Default,,0,0,0,,Be that as it m{\1c&HFF00&\u1}a{\r}y, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.23,0:00:24.31,Default,,0,0,0,,Be that as it ma{\1c&HFF00&\u1}y{\r}, Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.31,0:00:24.53,Default,,0,0,0,,Be that as it may,{\1c&HFF00&\u1} {\r}Fuyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.53,0:00:24.63,Default,,0,0,0,,Be that as it may, {\1c&HFF00&\u1}F{\r}uyuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.63,0:00:24.71,Default,,0,0,0,,Be that as it may, F{\1c&HFF00&\u1}u{\r}yuki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.71,0:00:24.77,Default,,0,0,0,,Be that as it may, Fu{\1c&HFF00&\u1}y{\r}uki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.77,0:00:24.87,Default,,0,0,0,,Be that as it may, Fuy{\1c&HFF00&\u1}u{\r}ki's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.87,0:00:24.97,Default,,0,0,0,,Be that as it may, Fuyu{\1c&HFF00&\u1}k{\r}i's Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:24.97,0:00:25.03,Default,,0,0,0,,Be that as it may, Fuyuk{\1c&HFF00&\u1}i{\r}'s Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.03,0:00:25.07,Default,,0,0,0,,Be that as it may, Fuyuki{\1c&HFF00&\u1}'{\r}s Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.07,0:00:25.11,Default,,0,0,0,,Be that as it may, Fuyuki'{\1c&HFF00&\u1}s{\r} Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.11,0:00:25.15,Default,,0,0,0,,Be that as it may, Fuyuki's{\1c&HFF00&\u1} {\r}Holy Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.15,0:00:25.23,Default,,0,0,0,,Be that as it may, Fuyuki's {\1c&HFF00&\u1}H{\r}oly Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.23,0:00:25.29,Default,,0,0,0,,Be that as it may, Fuyuki's H{\1c&HFF00&\u1}o{\r}ly Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.29,0:00:25.37,Default,,0,0,0,,Be that as it may, Fuyuki's Ho{\1c&HFF00&\u1}l{\r}y Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.37,0:00:25.41,Default,,0,0,0,,Be that as it may, Fuyuki's Hol{\1c&HFF00&\u1}y{\r} Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.41,0:00:25.45,Default,,0,0,0,,Be that as it may, Fuyuki's Holy{\1c&HFF00&\u1} {\r}Grail is far too powerful to ignore.
+Dialogue: 0,0:00:25.45,0:00:25.51,Default,,0,0,0,,Be that as it may, Fuyuki's Holy {\1c&HFF00&\u1}G{\r}rail is far too powerful to ignore.
+Dialogue: 0,0:00:25.51,0:00:25.63,Default,,0,0,0,,Be that as it may, Fuyuki's Holy G{\1c&HFF00&\u1}r{\r}ail is far too powerful to ignore.
+Dialogue: 0,0:00:25.63,0:00:25.65,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Gr{\1c&HFF00&\u1}a{\r}il is far too powerful to ignore.
+Dialogue: 0,0:00:25.65,0:00:25.71,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Gra{\1c&HFF00&\u1}i{\r}l is far too powerful to ignore.
+Dialogue: 0,0:00:25.71,0:00:25.79,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grai{\1c&HFF00&\u1}l{\r} is far too powerful to ignore.
+Dialogue: 0,0:00:25.79,0:00:25.85,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail{\1c&HFF00&\u1} {\r}is far too powerful to ignore.
+Dialogue: 0,0:00:25.85,0:00:25.87,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail {\1c&HFF00&\u1}i{\r}s far too powerful to ignore.
+Dialogue: 0,0:00:25.87,0:00:25.91,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail i{\1c&HFF00&\u1}s{\r} far too powerful to ignore.
+Dialogue: 0,0:00:25.91,0:00:26.01,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is{\1c&HFF00&\u1} {\r}far too powerful to ignore.
+Dialogue: 0,0:00:26.01,0:00:26.15,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is {\1c&HFF00&\u1}f{\r}ar too powerful to ignore.
+Dialogue: 0,0:00:26.15,0:00:26.19,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is f{\1c&HFF00&\u1}a{\r}r too powerful to ignore.
+Dialogue: 0,0:00:26.19,0:00:26.27,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is fa{\1c&HFF00&\u1}r{\r} too powerful to ignore.
+Dialogue: 0,0:00:26.27,0:00:26.35,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far{\1c&HFF00&\u1} {\r}too powerful to ignore.
+Dialogue: 0,0:00:26.35,0:00:26.37,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far {\1c&HFF00&\u1}t{\r}oo powerful to ignore.
+Dialogue: 0,0:00:26.37,0:00:26.47,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far t{\1c&HFF00&\u1}o{\r}o powerful to ignore.
+Dialogue: 0,0:00:26.47,0:00:26.51,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far to{\1c&HFF00&\u1}o{\r} powerful to ignore.
+Dialogue: 0,0:00:26.51,0:00:26.59,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too{\1c&HFF00&\u1} {\r}powerful to ignore.
+Dialogue: 0,0:00:26.59,0:00:26.71,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too {\1c&HFF00&\u1}p{\r}owerful to ignore.
+Dialogue: 0,0:00:26.71,0:00:26.73,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too p{\1c&HFF00&\u1}o{\r}werful to ignore.
+Dialogue: 0,0:00:26.73,0:00:26.79,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too po{\1c&HFF00&\u1}w{\r}erful to ignore.
+Dialogue: 0,0:00:26.79,0:00:26.81,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too pow{\1c&HFF00&\u1}e{\r}rful to ignore.
+Dialogue: 0,0:00:26.81,0:00:26.87,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powe{\1c&HFF00&\u1}r{\r}ful to ignore.
+Dialogue: 0,0:00:26.87,0:00:26.95,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too power{\1c&HFF00&\u1}f{\r}ul to ignore.
+Dialogue: 0,0:00:26.95,0:00:26.97,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerf{\1c&HFF00&\u1}u{\r}l to ignore.
+Dialogue: 0,0:00:26.97,0:00:27.05,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerfu{\1c&HFF00&\u1}l{\r} to ignore.
+Dialogue: 0,0:00:27.05,0:00:27.11,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful{\1c&HFF00&\u1} {\r}to ignore.
+Dialogue: 0,0:00:27.11,0:00:27.15,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful {\1c&HFF00&\u1}t{\r}o ignore.
+Dialogue: 0,0:00:27.15,0:00:27.21,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful t{\1c&HFF00&\u1}o{\r} ignore.
+Dialogue: 0,0:00:27.21,0:00:27.29,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful to{\1c&HFF00&\u1} {\r}ignore.
+Dialogue: 0,0:00:27.29,0:00:27.31,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful to {\1c&HFF00&\u1}i{\r}gnore.
+Dialogue: 0,0:00:27.31,0:00:27.37,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful to i{\1c&HFF00&\u1}g{\r}nore.
+Dialogue: 0,0:00:27.37,0:00:27.53,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful to ig{\1c&HFF00&\u1}n{\r}ore.
+Dialogue: 0,0:00:27.53,0:00:27.57,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful to ign{\1c&HFF00&\u1}o{\r}re.
+Dialogue: 0,0:00:27.57,0:00:27.63,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful to igno{\1c&HFF00&\u1}r{\r}e.
+Dialogue: 0,0:00:27.63,0:00:27.65,Default,,0,0,0,,Be that as it may, Fuyuki's Holy Grail is far too powerful to ignor{\1c&HFF00&\u1}e{\r}.
+Dialogue: 0,0:00:27.65,0:00:28.06,Default,,0,0,0,,{\1c&HFF00&\u1} {\r}It is an omnipotent wish-granting device.
+Dialogue: 0,0:00:28.06,0:00:28.08,Default,,0,0,0,,{\1c&HFF00&\u1}I{\r}t is an omnipotent wish-granting device.
+Dialogue: 0,0:00:28.08,0:00:28.14,Default,,0,0,0,,I{\1c&HFF00&\u1}t{\r} is an omnipotent wish-granting device.
+Dialogue: 0,0:00:28.14,0:00:28.20,Default,,0,0,0,,It{\1c&HFF00&\u1} {\r}is an omnipotent wish-granting device.
+Dialogue: 0,0:00:28.20,0:00:28.22,Default,,0,0,0,,It {\1c&HFF00&\u1}i{\r}s an omnipotent wish-granting device.
+Dialogue: 0,0:00:28.22,0:00:28.26,Default,,0,0,0,,It i{\1c&HFF00&\u1}s{\r} an omnipotent wish-granting device.
+Dialogue: 0,0:00:28.26,0:00:28.30,Default,,0,0,0,,It is{\1c&HFF00&\u1} {\r}an omnipotent wish-granting device.
+Dialogue: 0,0:00:28.30,0:00:28.32,Default,,0,0,0,,It is {\1c&HFF00&\u1}a{\r}n omnipotent wish-granting device.
+Dialogue: 0,0:00:28.32,0:00:28.34,Default,,0,0,0,,It is a{\1c&HFF00&\u1}n{\r} omnipotent wish-granting device.
+Dialogue: 0,0:00:28.34,0:00:28.42,Default,,0,0,0,,It is an{\1c&HFF00&\u1} {\r}omnipotent wish-granting device.
+Dialogue: 0,0:00:28.42,0:00:28.44,Default,,0,0,0,,It is an {\1c&HFF00&\u1}o{\r}mnipotent wish-granting device.
+Dialogue: 0,0:00:28.44,0:00:28.52,Default,,0,0,0,,It is an o{\1c&HFF00&\u1}m{\r}nipotent wish-granting device.
+Dialogue: 0,0:00:28.52,0:00:28.56,Default,,0,0,0,,It is an om{\1c&HFF00&\u1}n{\r}ipotent wish-granting device.
+Dialogue: 0,0:00:28.56,0:00:28.62,Default,,0,0,0,,It is an omn{\1c&HFF00&\u1}i{\r}potent wish-granting device.
+Dialogue: 0,0:00:28.62,0:00:28.68,Default,,0,0,0,,It is an omni{\1c&HFF00&\u1}p{\r}otent wish-granting device.
+Dialogue: 0,0:00:28.68,0:00:28.74,Default,,0,0,0,,It is an omnip{\1c&HFF00&\u1}o{\r}tent wish-granting device.
+Dialogue: 0,0:00:28.74,0:00:28.80,Default,,0,0,0,,It is an omnipo{\1c&HFF00&\u1}t{\r}ent wish-granting device.
+Dialogue: 0,0:00:28.80,0:00:28.82,Default,,0,0,0,,It is an omnipot{\1c&HFF00&\u1}e{\r}nt wish-granting device.
+Dialogue: 0,0:00:28.82,0:00:28.88,Default,,0,0,0,,It is an omnipote{\1c&HFF00&\u1}n{\r}t wish-granting device.
+Dialogue: 0,0:00:28.88,0:00:28.92,Default,,0,0,0,,It is an omnipoten{\1c&HFF00&\u1}t{\r} wish-granting device.
+Dialogue: 0,0:00:28.92,0:00:29.00,Default,,0,0,0,,It is an omnipotent{\1c&HFF00&\u1} {\r}wish-granting device.
+Dialogue: 0,0:00:29.00,0:00:29.10,Default,,0,0,0,,It is an omnipotent {\1c&HFF00&\u1}w{\r}ish-granting device.
+Dialogue: 0,0:00:29.10,0:00:29.14,Default,,0,0,0,,It is an omnipotent w{\1c&HFF00&\u1}i{\r}sh-granting device.
+Dialogue: 0,0:00:29.14,0:00:29.18,Default,,0,0,0,,It is an omnipotent wi{\1c&HFF00&\u1}s{\r}h-granting device.
+Dialogue: 0,0:00:29.18,0:00:29.20,Default,,0,0,0,,It is an omnipotent wis{\1c&HFF00&\u1}h{\r}-granting device.
+Dialogue: 0,0:00:29.20,0:00:29.38,Default,,0,0,0,,It is an omnipotent wish{\1c&HFF00&\u1}-{\r}granting device.
+Dialogue: 0,0:00:29.38,0:00:29.44,Default,,0,0,0,,It is an omnipotent wish-{\1c&HFF00&\u1}g{\r}ranting device.
+Dialogue: 0,0:00:29.44,0:00:29.50,Default,,0,0,0,,It is an omnipotent wish-g{\1c&HFF00&\u1}r{\r}anting device.
+Dialogue: 0,0:00:29.50,0:00:29.52,Default,,0,0,0,,It is an omnipotent wish-gr{\1c&HFF00&\u1}a{\r}nting device.
+Dialogue: 0,0:00:29.52,0:00:29.60,Default,,0,0,0,,It is an omnipotent wish-gra{\1c&HFF00&\u1}n{\r}ting device.
+Dialogue: 0,0:00:29.60,0:00:29.68,Default,,0,0,0,,It is an omnipotent wish-gran{\1c&HFF00&\u1}t{\r}ing device.
+Dialogue: 0,0:00:29.68,0:00:29.70,Default,,0,0,0,,It is an omnipotent wish-grant{\1c&HFF00&\u1}i{\r}ng device.
+Dialogue: 0,0:00:29.70,0:00:29.72,Default,,0,0,0,,It is an omnipotent wish-granti{\1c&HFF00&\u1}n{\r}g device.
+Dialogue: 0,0:00:29.72,0:00:29.76,Default,,0,0,0,,It is an omnipotent wish-grantin{\1c&HFF00&\u1}g{\r} device.
+Dialogue: 0,0:00:29.76,0:00:29.80,Default,,0,0,0,,It is an omnipotent wish-granting{\1c&HFF00&\u1} {\r}device.
+Dialogue: 0,0:00:29.80,0:00:29.84,Default,,0,0,0,,It is an omnipotent wish-granting {\1c&HFF00&\u1}d{\r}evice.
+Dialogue: 0,0:00:29.84,0:00:29.90,Default,,0,0,0,,It is an omnipotent wish-granting d{\1c&HFF00&\u1}e{\r}vice.
+Dialogue: 0,0:00:29.90,0:00:30.04,Default,,0,0,0,,It is an omnipotent wish-granting de{\1c&HFF00&\u1}v{\r}ice.
+Dialogue: 0,0:00:30.04,0:00:30.10,Default,,0,0,0,,It is an omnipotent wish-granting dev{\1c&HFF00&\u1}i{\r}ce.
+Dialogue: 0,0:00:30.10,0:00:30.14,Default,,0,0,0,,It is an omnipotent wish-granting devi{\1c&HFF00&\u1}c{\r}e.
+Dialogue: 0,0:00:30.14,0:00:30.18,Default,,0,0,0,,It is an omnipotent wish-granting devic{\1c&HFF00&\u1}e{\r}.
+Dialogue: 0,0:00:30.18,0:00:30.72,Default,,0,0,0,,{\1c&HFF00&\u1} {\r}Who knows what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:30.72,0:00:30.74,Default,,0,0,0,,{\1c&HFF00&\u1}W{\r}ho knows what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:30.74,0:00:30.78,Default,,0,0,0,,W{\1c&HFF00&\u1}h{\r}o knows what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:30.78,0:00:30.82,Default,,0,0,0,,Wh{\1c&HFF00&\u1}o{\r} knows what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:30.82,0:00:30.86,Default,,0,0,0,,Who{\1c&HFF00&\u1} {\r}knows what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:30.86,0:00:30.90,Default,,0,0,0,,Who {\1c&HFF00&\u1}k{\r}nows what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:30.90,0:00:30.94,Default,,0,0,0,,Who k{\1c&HFF00&\u1}n{\r}ows what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:30.94,0:00:30.98,Default,,0,0,0,,Who kn{\1c&HFF00&\u1}o{\r}ws what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:30.98,0:00:31.06,Default,,0,0,0,,Who kno{\1c&HFF00&\u1}w{\r}s what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.06,0:00:31.10,Default,,0,0,0,,Who know{\1c&HFF00&\u1}s{\r} what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.10,0:00:31.16,Default,,0,0,0,,Who knows{\1c&HFF00&\u1} {\r}what disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.16,0:00:31.18,Default,,0,0,0,,Who knows {\1c&HFF00&\u1}w{\r}hat disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.18,0:00:31.22,Default,,0,0,0,,Who knows w{\1c&HFF00&\u1}h{\r}at disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.22,0:00:31.24,Default,,0,0,0,,Who knows wh{\1c&HFF00&\u1}a{\r}t disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.24,0:00:31.30,Default,,0,0,0,,Who knows wha{\1c&HFF00&\u1}t{\r} disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.30,0:00:31.34,Default,,0,0,0,,Who knows what{\1c&HFF00&\u1} {\r}disaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.34,0:00:31.40,Default,,0,0,0,,Who knows what {\1c&HFF00&\u1}d{\r}isaster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.40,0:00:31.48,Default,,0,0,0,,Who knows what d{\1c&HFF00&\u1}i{\r}saster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.48,0:00:31.60,Default,,0,0,0,,Who knows what di{\1c&HFF00&\u1}s{\r}aster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.60,0:00:31.66,Default,,0,0,0,,Who knows what dis{\1c&HFF00&\u1}a{\r}ster it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.66,0:00:31.74,Default,,0,0,0,,Who knows what disa{\1c&HFF00&\u1}s{\r}ter it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.74,0:00:31.80,Default,,0,0,0,,Who knows what disas{\1c&HFF00&\u1}t{\r}er it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.80,0:00:31.82,Default,,0,0,0,,Who knows what disast{\1c&HFF00&\u1}e{\r}r it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.82,0:00:31.88,Default,,0,0,0,,Who knows what disaste{\1c&HFF00&\u1}r{\r} it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.88,0:00:31.92,Default,,0,0,0,,Who knows what disaster{\1c&HFF00&\u1} {\r}it could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.92,0:00:31.94,Default,,0,0,0,,Who knows what disaster {\1c&HFF00&\u1}i{\r}t could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.94,0:00:31.98,Default,,0,0,0,,Who knows what disaster i{\1c&HFF00&\u1}t{\r} could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:31.98,0:00:32.02,Default,,0,0,0,,Who knows what disaster it{\1c&HFF00&\u1} {\r}could unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.02,0:00:32.06,Default,,0,0,0,,Who knows what disaster it {\1c&HFF00&\u1}c{\r}ould unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.06,0:00:32.10,Default,,0,0,0,,Who knows what disaster it c{\1c&HFF00&\u1}o{\r}uld unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.10,0:00:32.12,Default,,0,0,0,,Who knows what disaster it co{\1c&HFF00&\u1}u{\r}ld unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.12,0:00:32.16,Default,,0,0,0,,Who knows what disaster it cou{\1c&HFF00&\u1}l{\r}d unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.16,0:00:32.20,Default,,0,0,0,,Who knows what disaster it coul{\1c&HFF00&\u1}d{\r} unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.20,0:00:32.26,Default,,0,0,0,,Who knows what disaster it could{\1c&HFF00&\u1} {\r}unleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.26,0:00:32.28,Default,,0,0,0,,Who knows what disaster it could {\1c&HFF00&\u1}u{\r}nleash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.28,0:00:32.38,Default,,0,0,0,,Who knows what disaster it could u{\1c&HFF00&\u1}n{\r}leash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.38,0:00:32.46,Default,,0,0,0,,Who knows what disaster it could un{\1c&HFF00&\u1}l{\r}eash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.46,0:00:32.50,Default,,0,0,0,,Who knows what disaster it could unl{\1c&HFF00&\u1}e{\r}ash should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.50,0:00:32.56,Default,,0,0,0,,Who knows what disaster it could unle{\1c&HFF00&\u1}a{\r}sh should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.56,0:00:32.60,Default,,0,0,0,,Who knows what disaster it could unlea{\1c&HFF00&\u1}s{\r}h should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.60,0:00:32.68,Default,,0,0,0,,Who knows what disaster it could unleas{\1c&HFF00&\u1}h{\r} should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.68,0:00:32.90,Default,,0,0,0,,Who knows what disaster it could unleash{\1c&HFF00&\u1} {\r}should it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.90,0:00:32.92,Default,,0,0,0,,Who knows what disaster it could unleash {\1c&HFF00&\u1}s{\r}hould it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.92,0:00:32.96,Default,,0,0,0,,Who knows what disaster it could unleash s{\1c&HFF00&\u1}h{\r}ould it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.96,0:00:32.98,Default,,0,0,0,,Who knows what disaster it could unleash sh{\1c&HFF00&\u1}o{\r}uld it happen to fall into the wrong hands.
+Dialogue: 0,0:00:32.98,0:00:33.00,Default,,0,0,0,,Who knows what disaster it could unleash sho{\1c&HFF00&\u1}u{\r}ld it happen to fall into the wrong hands.
+Dialogue: 0,0:00:33.00,0:00:33.04,Default,,0,0,0,,Who knows what disaster it could unleash shou{\1c&HFF00&\u1}l{\r}d it happen to fall into the wrong hands.
+Dialogue: 0,0:00:33.04,0:00:33.08,Default,,0,0,0,,Who knows what disaster it could unleash shoul{\1c&HFF00&\u1}d{\r} it happen to fall into the wrong hands.
+Dialogue: 0,0:00:33.08,0:00:33.12,Default,,0,0,0,,Who knows what disaster it could unleash should{\1c&HFF00&\u1} {\r}it happen to fall into the wrong hands.
+Dialogue: 0,0:00:33.12,0:00:33.14,Default,,0,0,0,,Who knows what disaster it could unleash should {\1c&HFF00&\u1}i{\r}t happen to fall into the wrong hands.
+Dialogue: 0,0:00:33.14,0:00:33.18,Default,,0,0,0,,Who knows what disaster it could unleash should i{\1c&HFF00&\u1}t{\r} happen to fall into the wrong hands.
+Dialogue: 0,0:00:33.18,0:00:33.22,Default,,0,0,0,,Who knows what disaster it could unleash should it{\1c&HFF00&\u1} {\r}happen to fall into the wrong hands.
+Dialogue: 0,0:00:33.22,0:00:33.26,Default,,0,0,0,,Who knows what disaster it could unleash should it {\1c&HFF00&\u1}h{\r}appen to fall into the wrong hands.
+Dialogue: 0,0:00:33.26,0:00:33.28,Default,,0,0,0,,Who knows what disaster it could unleash should it h{\1c&HFF00&\u1}a{\r}ppen to fall into the wrong hands.
+Dialogue: 0,0:00:33.28,0:00:33.36,Default,,0,0,0,,Who knows what disaster it could unleash should it ha{\1c&HFF00&\u1}p{\r}pen to fall into the wrong hands.
+Dialogue: 0,0:00:33.36,0:00:33.40,Default,,0,0,0,,Who knows what disaster it could unleash should it hap{\1c&HFF00&\u1}p{\r}en to fall into the wrong hands.
+Dialogue: 0,0:00:33.40,0:00:33.42,Default,,0,0,0,,Who knows what disaster it could unleash should it happ{\1c&HFF00&\u1}e{\r}n to fall into the wrong hands.
+Dialogue: 0,0:00:33.42,0:00:33.48,Default,,0,0,0,,Who knows what disaster it could unleash should it happe{\1c&HFF00&\u1}n{\r} to fall into the wrong hands.
+Dialogue: 0,0:00:33.48,0:00:33.50,Default,,0,0,0,,Who knows what disaster it could unleash should it happen{\1c&HFF00&\u1} {\r}to fall into the wrong hands.
+Dialogue: 0,0:00:33.50,0:00:33.54,Default,,0,0,0,,Who knows what disaster it could unleash should it happen {\1c&HFF00&\u1}t{\r}o fall into the wrong hands.
+Dialogue: 0,0:00:33.54,0:00:33.58,Default,,0,0,0,,Who knows what disaster it could unleash should it happen t{\1c&HFF00&\u1}o{\r} fall into the wrong hands.
+Dialogue: 0,0:00:33.58,0:00:33.66,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to{\1c&HFF00&\u1} {\r}fall into the wrong hands.
+Dialogue: 0,0:00:33.66,0:00:33.80,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to {\1c&HFF00&\u1}f{\r}all into the wrong hands.
+Dialogue: 0,0:00:33.80,0:00:33.82,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to f{\1c&HFF00&\u1}a{\r}ll into the wrong hands.
+Dialogue: 0,0:00:33.82,0:00:33.90,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fa{\1c&HFF00&\u1}l{\r}l into the wrong hands.
+Dialogue: 0,0:00:33.90,0:00:33.94,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fal{\1c&HFF00&\u1}l{\r} into the wrong hands.
+Dialogue: 0,0:00:33.94,0:00:34.00,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall{\1c&HFF00&\u1} {\r}into the wrong hands.
+Dialogue: 0,0:00:34.00,0:00:34.02,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall {\1c&HFF00&\u1}i{\r}nto the wrong hands.
+Dialogue: 0,0:00:34.02,0:00:34.08,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall i{\1c&HFF00&\u1}n{\r}to the wrong hands.
+Dialogue: 0,0:00:34.08,0:00:34.12,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall in{\1c&HFF00&\u1}t{\r}o the wrong hands.
+Dialogue: 0,0:00:34.12,0:00:34.16,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall int{\1c&HFF00&\u1}o{\r} the wrong hands.
+Dialogue: 0,0:00:34.16,0:00:34.18,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into{\1c&HFF00&\u1} {\r}the wrong hands.
+Dialogue: 0,0:00:34.18,0:00:34.20,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into {\1c&HFF00&\u1}t{\r}he wrong hands.
+Dialogue: 0,0:00:34.20,0:00:34.22,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into t{\1c&HFF00&\u1}h{\r}e wrong hands.
+Dialogue: 0,0:00:34.22,0:00:34.26,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into th{\1c&HFF00&\u1}e{\r} wrong hands.
+Dialogue: 0,0:00:34.26,0:00:34.32,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the{\1c&HFF00&\u1} {\r}wrong hands.
+Dialogue: 0,0:00:34.32,0:00:34.34,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the {\1c&HFF00&\u1}w{\r}rong hands.
+Dialogue: 0,0:00:34.34,0:00:34.42,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the w{\1c&HFF00&\u1}r{\r}ong hands.
+Dialogue: 0,0:00:34.42,0:00:34.46,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wr{\1c&HFF00&\u1}o{\r}ng hands.
+Dialogue: 0,0:00:34.46,0:00:34.50,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wro{\1c&HFF00&\u1}n{\r}g hands.
+Dialogue: 0,0:00:34.50,0:00:34.58,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wron{\1c&HFF00&\u1}g{\r} hands.
+Dialogue: 0,0:00:34.58,0:00:34.62,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wrong{\1c&HFF00&\u1} {\r}hands.
+Dialogue: 0,0:00:34.62,0:00:34.76,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wrong {\1c&HFF00&\u1}h{\r}ands.
+Dialogue: 0,0:00:34.76,0:00:34.82,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wrong h{\1c&HFF00&\u1}a{\r}nds.
+Dialogue: 0,0:00:34.82,0:00:34.86,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wrong ha{\1c&HFF00&\u1}n{\r}ds.
+Dialogue: 0,0:00:34.86,0:00:34.94,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wrong han{\1c&HFF00&\u1}d{\r}s.
+Dialogue: 0,0:00:34.94,0:00:35.00,Default,,0,0,0,,Who knows what disaster it could unleash should it happen to fall into the wrong hand{\1c&HFF00&\u1}s{\r}.
+Dialogue: 0,0:00:35.00,0:00:35.84,Default,,0,0,0,,{\1c&HFF00&\u1} {\r}In which case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:35.84,0:00:35.86,Default,,0,0,0,,{\1c&HFF00&\u1}I{\r}n which case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:35.86,0:00:35.92,Default,,0,0,0,,I{\1c&HFF00&\u1}n{\r} which case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:35.92,0:00:35.96,Default,,0,0,0,,In{\1c&HFF00&\u1} {\r}which case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:35.96,0:00:36.00,Default,,0,0,0,,In {\1c&HFF00&\u1}w{\r}hich case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.00,0:00:36.04,Default,,0,0,0,,In w{\1c&HFF00&\u1}h{\r}ich case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.04,0:00:36.06,Default,,0,0,0,,In wh{\1c&HFF00&\u1}i{\r}ch case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.06,0:00:36.10,Default,,0,0,0,,In whi{\1c&HFF00&\u1}c{\r}h case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.10,0:00:36.14,Default,,0,0,0,,In whic{\1c&HFF00&\u1}h{\r} case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.14,0:00:36.22,Default,,0,0,0,,In which{\1c&HFF00&\u1} {\r}case, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.22,0:00:36.38,Default,,0,0,0,,In which {\1c&HFF00&\u1}c{\r}ase, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.38,0:00:36.44,Default,,0,0,0,,In which c{\1c&HFF00&\u1}a{\r}se, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.44,0:00:36.48,Default,,0,0,0,,In which ca{\1c&HFF00&\u1}s{\r}e, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.48,0:00:36.54,Default,,0,0,0,,In which cas{\1c&HFF00&\u1}e{\r}, the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:36.54,0:00:37.13,Default,,0,0,0,,In which case,{\1c&HFF00&\u1} {\r}the best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.13,0:00:37.15,Default,,0,0,0,,In which case, {\1c&HFF00&\u1}t{\r}he best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.15,0:00:37.17,Default,,0,0,0,,In which case, t{\1c&HFF00&\u1}h{\r}e best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.17,0:00:37.21,Default,,0,0,0,,In which case, th{\1c&HFF00&\u1}e{\r} best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.21,0:00:37.25,Default,,0,0,0,,In which case, the{\1c&HFF00&\u1} {\r}best course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.25,0:00:37.31,Default,,0,0,0,,In which case, the {\1c&HFF00&\u1}b{\r}est course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.31,0:00:37.35,Default,,0,0,0,,In which case, the b{\1c&HFF00&\u1}e{\r}st course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.35,0:00:37.43,Default,,0,0,0,,In which case, the be{\1c&HFF00&\u1}s{\r}t course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.43,0:00:37.51,Default,,0,0,0,,In which case, the bes{\1c&HFF00&\u1}t{\r} course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.51,0:00:37.59,Default,,0,0,0,,In which case, the best{\1c&HFF00&\u1} {\r}course of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.59,0:00:37.65,Default,,0,0,0,,In which case, the best {\1c&HFF00&\u1}c{\r}ourse of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.65,0:00:37.67,Default,,0,0,0,,In which case, the best c{\1c&HFF00&\u1}o{\r}urse of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.67,0:00:37.71,Default,,0,0,0,,In which case, the best co{\1c&HFF00&\u1}u{\r}rse of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.71,0:00:37.75,Default,,0,0,0,,In which case, the best cou{\1c&HFF00&\u1}r{\r}se of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.75,0:00:37.77,Default,,0,0,0,,In which case, the best cour{\1c&HFF00&\u1}s{\r}e of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.77,0:00:37.81,Default,,0,0,0,,In which case, the best cours{\1c&HFF00&\u1}e{\r} of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.81,0:00:37.85,Default,,0,0,0,,In which case, the best course{\1c&HFF00&\u1} {\r}of action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.85,0:00:37.87,Default,,0,0,0,,In which case, the best course {\1c&HFF00&\u1}o{\r}f action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.87,0:00:37.91,Default,,0,0,0,,In which case, the best course o{\1c&HFF00&\u1}f{\r} action would be to ensure that the four of you...
+Dialogue: 0,0:00:37.91,0:00:38.03,Default,,0,0,0,,In which case, the best course of{\1c&HFF00&\u1} {\r}action would be to ensure that the four of you...
+Dialogue: 0,0:00:38.03,0:00:38.05,Default,,0,0,0,,In which case, the best course of {\1c&HFF00&\u1}a{\r}ction would be to ensure that the four of you...
+Dialogue: 0,0:00:38.05,0:00:38.15,Default,,0,0,0,,In which case, the best course of a{\1c&HFF00&\u1}c{\r}tion would be to ensure that the four of you...
+Dialogue: 0,0:00:38.15,0:00:38.19,Default,,0,0,0,,In which case, the best course of ac{\1c&HFF00&\u1}t{\r}ion would be to ensure that the four of you...
+Dialogue: 0,0:00:38.19,0:00:38.25,Default,,0,0,0,,In which case, the best course of act{\1c&HFF00&\u1}i{\r}on would be to ensure that the four of you...
+Dialogue: 0,0:00:38.25,0:00:38.27,Default,,0,0,0,,In which case, the best course of acti{\1c&HFF00&\u1}o{\r}n would be to ensure that the four of you...
+Dialogue: 0,0:00:38.27,0:00:38.35,Default,,0,0,0,,In which case, the best course of actio{\1c&HFF00&\u1}n{\r} would be to ensure that the four of you...
+Dialogue: 0,0:00:38.35,0:00:38.63,Default,,0,0,0,,In which case, the best course of action{\1c&HFF00&\u1} {\r}would be to ensure that the four of you...
+Dialogue: 0,0:00:38.63,0:00:38.67,Default,,0,0,0,,In which case, the best course of action {\1c&HFF00&\u1}w{\r}ould be to ensure that the four of you...
+Dialogue: 0,0:00:38.67,0:00:38.71,Default,,0,0,0,,In which case, the best course of action w{\1c&HFF00&\u1}o{\r}uld be to ensure that the four of you...
+Dialogue: 0,0:00:38.71,0:00:38.73,Default,,0,0,0,,In which case, the best course of action wo{\1c&HFF00&\u1}u{\r}ld be to ensure that the four of you...
+Dialogue: 0,0:00:38.73,0:00:38.77,Default,,0,0,0,,In which case, the best course of action wou{\1c&HFF00&\u1}l{\r}d be to ensure that the four of you...
+Dialogue: 0,0:00:38.77,0:00:38.79,Default,,0,0,0,,In which case, the best course of action woul{\1c&HFF00&\u1}d{\r} be to ensure that the four of you...
+Dialogue: 0,0:00:38.79,0:00:38.83,Default,,0,0,0,,In which case, the best course of action would{\1c&HFF00&\u1} {\r}be to ensure that the four of you...
+Dialogue: 0,0:00:38.83,0:00:38.87,Default,,0,0,0,,In which case, the best course of action would {\1c&HFF00&\u1}b{\r}e to ensure that the four of you...
+Dialogue: 0,0:00:38.87,0:00:38.93,Default,,0,0,0,,In which case, the best course of action would b{\1c&HFF00&\u1}e{\r} to ensure that the four of you...
+Dialogue: 0,0:00:38.93,0:00:38.99,Default,,0,0,0,,In which case, the best course of action would be{\1c&HFF00&\u1} {\r}to ensure that the four of you...
+Dialogue: 0,0:00:38.99,0:00:39.07,Default,,0,0,0,,In which case, the best course of action would be {\1c&HFF00&\u1}t{\r}o ensure that the four of you...
+Dialogue: 0,0:00:39.07,0:00:39.11,Default,,0,0,0,,In which case, the best course of action would be t{\1c&HFF00&\u1}o{\r} ensure that the four of you...
+Dialogue: 0,0:00:39.11,0:00:39.17,Default,,0,0,0,,In which case, the best course of action would be to{\1c&HFF00&\u1} {\r}ensure that the four of you...
+Dialogue: 0,0:00:39.17,0:00:39.21,Default,,0,0,0,,In which case, the best course of action would be to {\1c&HFF00&\u1}e{\r}nsure that the four of you...
+Dialogue: 0,0:00:39.21,0:00:39.33,Default,,0,0,0,,In which case, the best course of action would be to e{\1c&HFF00&\u1}n{\r}sure that the four of you...
+Dialogue: 0,0:00:39.33,0:00:39.45,Default,,0,0,0,,In which case, the best course of action would be to en{\1c&HFF00&\u1}s{\r}ure that the four of you...
+Dialogue: 0,0:00:39.45,0:00:39.49,Default,,0,0,0,,In which case, the best course of action would be to ens{\1c&HFF00&\u1}u{\r}re that the four of you...
+Dialogue: 0,0:00:39.49,0:00:39.53,Default,,0,0,0,,In which case, the best course of action would be to ensu{\1c&HFF00&\u1}r{\r}e that the four of you...
+Dialogue: 0,0:00:39.53,0:00:39.55,Default,,0,0,0,,In which case, the best course of action would be to ensur{\1c&HFF00&\u1}e{\r} that the four of you...
+Dialogue: 0,0:00:39.55,0:00:39.57,Default,,0,0,0,,In which case, the best course of action would be to ensure{\1c&HFF00&\u1} {\r}that the four of you...
+Dialogue: 0,0:00:39.57,0:00:39.59,Default,,0,0,0,,In which case, the best course of action would be to ensure {\1c&HFF00&\u1}t{\r}hat the four of you...
+Dialogue: 0,0:00:39.59,0:00:39.61,Default,,0,0,0,,In which case, the best course of action would be to ensure t{\1c&HFF00&\u1}h{\r}at the four of you...
+Dialogue: 0,0:00:39.61,0:00:39.63,Default,,0,0,0,,In which case, the best course of action would be to ensure th{\1c&HFF00&\u1}a{\r}t the four of you...
+Dialogue: 0,0:00:39.63,0:00:39.65,Default,,0,0,0,,In which case, the best course of action would be to ensure tha{\1c&HFF00&\u1}t{\r} the four of you...
+Dialogue: 0,0:00:39.65,0:00:39.67,Default,,0,0,0,,In which case, the best course of action would be to ensure that{\1c&HFF00&\u1} {\r}the four of you...
+Dialogue: 0,0:00:39.67,0:00:39.69,Default,,0,0,0,,In which case, the best course of action would be to ensure that {\1c&HFF00&\u1}t{\r}he four of you...
+Dialogue: 0,0:00:39.69,0:00:39.71,Default,,0,0,0,,In which case, the best course of action would be to ensure that t{\1c&HFF00&\u1}h{\r}e four of you...
+Dialogue: 0,0:00:39.71,0:00:39.73,Default,,0,0,0,,In which case, the best course of action would be to ensure that th{\1c&HFF00&\u1}e{\r} four of you...
+Dialogue: 0,0:00:39.73,0:00:39.75,Default,,0,0,0,,In which case, the best course of action would be to ensure that the{\1c&HFF00&\u1} {\r}four of you...
+Dialogue: 0,0:00:39.75,0:00:39.77,Default,,0,0,0,,In which case, the best course of action would be to ensure that the {\1c&HFF00&\u1}f{\r}our of you...
+Dialogue: 0,0:00:39.77,0:00:39.79,Default,,0,0,0,,In which case, the best course of action would be to ensure that the f{\1c&HFF00&\u1}o{\r}ur of you...
+Dialogue: 0,0:00:39.79,0:00:39.81,Default,,0,0,0,,In which case, the best course of action would be to ensure that the fo{\1c&HFF00&\u1}u{\r}r of you...
+Dialogue: 0,0:00:39.81,0:00:39.83,Default,,0,0,0,,In which case, the best course of action would be to ensure that the fou{\1c&HFF00&\u1}r{\r} of you...
+Dialogue: 0,0:00:39.83,0:00:39.85,Default,,0,0,0,,In which case, the best course of action would be to ensure that the four{\1c&HFF00&\u1} {\r}of you...
+Dialogue: 0,0:00:39.85,0:00:39.87,Default,,0,0,0,,In which case, the best course of action would be to ensure that the four {\1c&HFF00&\u1}o{\r}f you...
+Dialogue: 0,0:00:39.87,0:00:39.89,Default,,0,0,0,,In which case, the best course of action would be to ensure that the four o{\1c&HFF00&\u1}f{\r} you...
+Dialogue: 0,0:00:39.89,0:00:39.91,Default,,0,0,0,,In which case, the best course of action would be to ensure that the four of{\1c&HFF00&\u1} {\r}you...
+Dialogue: 0,0:00:39.91,0:00:39.93,Default,,0,0,0,,In which case, the best course of action would be to ensure that the four of {\1c&HFF00&\u1}y{\r}ou...
+Dialogue: 0,0:00:39.93,0:00:39.95,Default,,0,0,0,,In which case, the best course of action would be to ensure that the four of y{\1c&HFF00&\u1}o{\r}u...
+Dialogue: 0,0:00:39.95,0:00:39.97,Default,,0,0,0,,In which case, the best course of action would be to ensure that the four of yo{\1c&HFF00&\u1}u{\r}...

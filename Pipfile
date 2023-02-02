@@ -11,6 +11,7 @@ protobuf = "*"
 grpclib = {extras = ["protobuf"], version = "*"}
 python-magic = "*"
 whisper-grpc = {editable = true, path = "."}
+"pyannote.audio" = "==0.0.1"
 
 [dev-packages]
 tox = "*"
