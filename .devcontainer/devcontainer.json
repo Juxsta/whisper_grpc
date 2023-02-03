@@ -14,7 +14,8 @@
 			"extensions": [
 				"ms-python.python",
 				"GitHub.copilot",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"GitHub.vscode-pull-request-github"
 			]
 		}
 	},

@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y libmagic-dev ffmpeg
 RUN python -m pip install --upgrade pip
 COPY . .
 
-RUN pip install -e .
+RUN pip install .[server]
 
 
 # Run the server when the container starts
