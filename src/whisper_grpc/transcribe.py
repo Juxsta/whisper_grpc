@@ -7,7 +7,7 @@ import subprocess
 from pyannote.audio import Inference
 import ffmpeg
 import whisperx
-from whisperx.utils import write_ass
+from whisperx.utils import write_srt
 
 hf_token = os.getenv("HF_TOKEN")
 device = 'cuda'
@@ -25,8 +25,8 @@ def rip_audio_file(input_file: str, output_file: str):
 
 
 def save_results(result, output_path):
-    with open(output_path, "w", encoding="utf-8") as ass:
-        write_ass(result["segments"], file=ass, resolution='char')
+    with open(output_path, "w", encoding="utf-8") as srt:
+        write_srt(result["segments"], file=srt)
 
 
 def validate_file(file: str):
@@ -61,7 +61,7 @@ def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
     logger.debug(f'Transcribing {file} with model {model}')
     
     # Check if the file is valid
-    output_path = Path(file).with_suffix('.en.ass')
+    output_path = Path(file).with_suffix('.en.srt')
     if output_path.exists():
         logger.warning(f'Skipping {file} - external subtitles already exist')
         return "Subtitles already exist"
@@ -83,7 +83,7 @@ def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
             align_model, align_metadata = whisperx.load_align_model(
                 'en', device)
             result_aligned = whisperx.align(
-                result["segments"], align_model, align_metadata, audio_rip_path, device,)
+                result["segments"], align_model, align_metadata, audio_rip_path, device)
         except ffmpeg.Error as e:
             logger.error(
                 f'No English audio track found in {file}, error: {e.stderr}')
