@@ -24,12 +24,14 @@ def parse_args(args):
     parser.add_argument('--episode', required=True, help='Episode of the media to transcribe')
     parser.add_argument('--model', help='Model to use for transcribing', default='BASE_EN', type=str, choices=MODEL_MAP.values())
     parser.add_argument('--max_after', help='Number of episodes to process after the requested episode', default=0, type=int)
+    parser.add_argument('--host', '-H', default='whisper-grpc', help='Host to connect to', type=str)
+    parser.add_argument('--port', '-p', default=50051, help='Port to connect to', type=int)
     return parser.parse_args(args)
 
 
 async def main(args):
     args = parse_args(args)
-    async with Channel('whisper-grpc', 50051) as channel:
+    async with Channel(args.host, args.port) as channel:
         stub = WhisperStub(channel)
         request = LocalTranscribeAnimeDubRequest(
             title=args.title,
