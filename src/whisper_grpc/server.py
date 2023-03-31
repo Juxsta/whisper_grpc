@@ -21,11 +21,16 @@ References:
 """
 
 import argparse
-import logging
 import sys
-from whisper_grpc import __version__
 import os
 import asyncio
+from whisper_grpc import __version__
+from .grpc.grpc_server import serve_grpc
+from .rest.rest_server import serve_rest
+from .utils.logging_config import *
+
+
+_logger = logging.getLogger(__name__)
 __author__ = "Juxsta"
 __copyright__ = "Juxsta"
 __license__ = "MIT"
@@ -48,11 +53,10 @@ def checkTruthy(string:str or None):
         pass
     return False
 
-verbose = checkTruthy(os.getenv("VERBOSE"))
-very_verbose = checkTruthy(os.getenv("VERY_VERBOSE"))
-host = os.getenv("HOST")
-port = int(os.getenv("PORT")) if os.getenv("PORT") else None
 
+host = os.getenv("HOST")
+grpc_port = int(os.getenv("GRPC_PORT")) if os.getenv("GRPC_PORT") else None
+rest_port = int(os.getenv("REST_PORT")) if os.getenv("REST_PORT") else None
 # ---- CLI ----
 # The functions defined in this section are wrappers around the main Python
 # API allowing them to be called directly from the terminal as a CLI
@@ -76,7 +80,8 @@ def parse_args(args):
         version=f"whisper {__version__}",
     )
     parser.add_argument('--host', '-H', default='127.0.0.1')
-    parser.add_argument('--port', '-p', type=int, default=50051)
+    parser.add_argument('--grpc-port', '-gp', default=50051, type=int)
+    parser.add_argument('--rest-port', '-rp', default=50052, type=int)
     parser.add_argument('--verbose', '-v', action='store_true',
                         help='Enable verbose logging')
     parser.add_argument('--very-verbose', '-vv',
@@ -111,17 +116,17 @@ async def main(args):
     """
     args = parse_args(args)
     setup_logging(args)
-    _logger.debug("Starting server...")
-    from .service import WhisperHandler
-    from grpclib.utils import graceful_exit
-    from grpclib.server import Server
-    server = Server([WhisperHandler(logging_level=_logger.getEffectiveLevel())])
-    with graceful_exit([server]):
-        await server.start(host=host if host else args.host, port=port if port else args.port)
-        _logger.info('Server started')
-        await server.wait_closed()
-        _logger.info('Server closed')
-    _logger.info("Server ends here")
+    _logger.debug("Starting servers...")
+
+    grpc_host, grpc_port = args.host, args.grpc_port
+    rest_host, rest_port = args.host, args.rest_port
+
+    grpc_server = serve_grpc(grpc_host, grpc_port)
+    rest_server = asyncio.to_thread(serve_rest, rest_host, rest_port)
+
+    await asyncio.gather(grpc_server, rest_server)
+
+    _logger.info("Servers end here")
 
 
 def run():
