@@ -1,9 +1,9 @@
 import argparse
 from grpclib.client import Channel
-from whisper_grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubRequest
-from .common import MODEL_MAP, model_from_string
-from whisper_grpc.proto.whisper_grpc import WhisperStub
-from whisper_grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubRequest, LocalTranscribeAnimeDubResponse
+from whisper_grpc.grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubRequest
+from .utils.common import MODEL_MAP, model_from_string
+from whisper_grpc.grpc.proto.whisper_grpc import WhisperStub
+from whisper_grpc.grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubRequest, LocalTranscribeAnimeDubResponse
 import asyncio
 import sys
 

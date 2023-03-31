@@ -1,4 +1,4 @@
-import logging
+from .utils.logging_config import *
 import magic
 import tempfile
 import os
@@ -38,9 +38,9 @@ def validate_file(file: str):
     return True
 
 
-def transcribe(whisper_model: whisperx.Whisper, audio_rip_path: str, logger: logging.Logger):
+def transcribe(whisper_model: whisperx.Whisper, audio_rip_path: str, _logger: logging.Logger):
     try:
-        logger.info("Attempting VAD")
+        _logger.info("Attempting VAD")
         if not hf_token:
             raise Exception("No HF_TOKEN set")
         vad_pipeline = Inference(
@@ -48,26 +48,25 @@ def transcribe(whisper_model: whisperx.Whisper, audio_rip_path: str, logger: log
         return whisperx.transcribe_with_vad(
             whisper_model, audio_rip_path, vad_pipeline)
     except:
-        logger.warning("VAD failed, falling back to non-VAD transcribe")
+        _logger.warning("VAD failed, falling back to non-VAD transcribe")
         return whisper_model.transcribe(
             audio_rip_path, beam_size=5, best_of=5, language="en", verbose=False)
 
     # Refactor the above code to remove the duplication
 
 
-def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging_level)
-    logger.debug(f'Transcribing {file} with model {model}')
+def transcribe_file(file: str, model: str):
+    _logger = logging.getLogger(__name__)
+    _logger.debug(f'Transcribing {file} with model {model}')
     
     # Check if the file is valid
     output_path = Path(file).with_suffix('.en.srt')
     if output_path.exists():
-        logger.warning(f'Skipping {file} - external subtitles already exist')
+        _logger.warning(f'Skipping {file} - external subtitles already exist')
         return "Subtitles already exist"
 
     if not validate_file(file):
-        logger.error(f'Skipping {file} - not a valid file')
+        _logger.error(f'Skipping {file} - not a valid file')
         raise ValueError(f'Not a valid file: {file}')
 
     whisper_model = whisperx.load_model(model, device)
@@ -78,14 +77,14 @@ def transcribe_file(file: str, model: str, logging_level=logging.WARNING):
             audio_rip_path = f'{tmpdir}/{os.path.basename(file)}.wav'
             rip_audio_file(file, audio_rip_path)
             # Perform the transcription
-            result = transcribe(whisper_model, audio_rip_path, logger)
+            result = transcribe(whisper_model, audio_rip_path, _logger)
             # Perform the alignment
             align_model, align_metadata = whisperx.load_align_model(
                 'en', device)
             result_aligned = whisperx.align(
                 result["segments"], align_model, align_metadata, audio_rip_path, device)
         except ffmpeg.Error as e:
-            logger.error(
+            _logger.error(
                 f'No English audio track found in {file}, error: {e.stderr}')
             raise ValueError(f'No English audio track found in {file}')
     # Write the results to the output file

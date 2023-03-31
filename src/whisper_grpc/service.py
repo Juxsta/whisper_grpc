@@ -1,11 +1,12 @@
 import asyncio
 import concurrent.futures
-import logging
+from .utils.logging_config import *
+
 import os
-import whisper_grpc.proto.whisper_grpc as whisper_grpc
-from whisper_grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubResponse
-from .common import MODEL_MAP
-from whisper_grpc.utils.client_plex import ClientPlexServer
+import whisper_grpc.grpc.proto.whisper_grpc as whisper_grpc
+from whisper_grpc.grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubResponse
+from .utils.common import MODEL_MAP
+from whisper_grpc.client.client_plex import ClientPlexServer
 from .transcribe import transcribe_file
 from grpclib import Status
 from plexapi.video import Episode
@@ -18,8 +19,8 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         self.max_concurrent_tasks = max_concurrent_transcribes
         self.executor = concurrent.futures.ThreadPoolExecutor(max_workers=self.max_concurrent_tasks)
         self.semaphore = asyncio.Semaphore(self.max_concurrent_tasks)
-        self.logger = logging.getLogger(self.__class__.__name__)
-        self.logger.setLevel(logging_level)
+        self._logger = logging.getLogger(self.__class__.__name__)
+        self._logger.setLevel(logging_level)
         
     async def submit_task(self, file:str, model:str, episode:Episode = None):
         """
@@ -27,40 +28,40 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         Episode is optional, and is only used as a helper to refresh episode metadata upon transcription completion.
         """
         async with self.semaphore:
-            task = self.executor.submit(transcribe_file, file, model,self.logger.getEffectiveLevel())
+            task = self.executor.submit(transcribe_file, file, model,self._logger.getEffectiveLevel())
             try:
                 result = await asyncio.wrap_future(task)
-                self.logger.info(f"Transcription complete: {result}")
+                self._logger.info(f"Transcription complete: {result}")
                 if episode is not None:
-                    self.logger.info(f"Refreshing episode metadata {episode.title}")
+                    self._logger.info(f"Refreshing episode metadata {episode.title}")
                     episode.refresh()
                 return f"Transcription for file {file} complete: {result}"
             except Exception as e:
-                self.logger.error(f"Transcription failed: {e}")
+                self._logger.error(f"Transcription failed: {e}")
                 return f"Transcription for file {file} failed: {e}"
         
     async def LocalTranscribeAnimeDub(self, stream):
         # Get the first request
         request = await stream.recv_message()
         stream.send_initial_metadata(metadata=[('grpc-status', '0')])
-        self.logger.info(f"LocalTranscribeAnimeDub: {request}")
+        self._logger.info(f"LocalTranscribeAnimeDub: {request}")
         try:
             model = MODEL_MAP[request.model]
         except KeyError:
             # Return an error to the client
             stream.send_trailing_metadata(status=Status.INVALID_ARGUMENT, status_message=f'Invalid model: {request.model}')
-            self.logger.error(f"Invalid model: {request.model}")
+            self._logger.error(f"Invalid model: {request.model}")
             return
 
         try:
-            plex = ClientPlexServer(plex_url, plex_token, request.title, request.show, request.season, request.episode, log_level=self.logger.getEffectiveLevel())
+            plex = ClientPlexServer(plex_url, plex_token, request.title, request.show, request.season, request.episode, log_level=self._logger.getEffectiveLevel())
         except Exception as e:
             await stream.send_trailing_metadata(status=Status.NOT_FOUND, status_message=f'Unable to find requested title: {request.title}  Error: {e}')
-            self.logger.error(f"Unable to find requested title: {request.title}  Error: {e}")
+            self._logger.error(f"Unable to find requested title: {request.title}  Error: {e}")
             return
         if not plex.is_anime():
             await stream.send_trailing_metadata(status=Status.INVALID_ARGUMENT, status_message=f'Title is not an anime: {request.title}')
-            self.logger.error(f"Title is not an anime: {request.title}")
+            self._logger.error(f"Title is not an anime: {request.title}")
             return
 
         # Process the transcription tasks asynchronously
@@ -75,7 +76,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
                 return
             pass
         # Transcribe the episodes in episodes_to_transcribe
-        self.logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes: {map(lambda ep: ep.locations[0] ,episodes_to_transcribe)}")
+        self._logger.info(f"Transcribing {len(episodes_to_transcribe)} episodes: {map(lambda ep: ep.locations[0] ,episodes_to_transcribe)}")
         await stream.send_message(LocalTranscribeAnimeDubResponse(text=f"Transcribing the following episodes: {map(lambda ep: ep.locations[0] ,episodes_to_transcribe)}"))
         def map_to_task(ep:Episode):
             return self.submit_task(ep.locations[0], model, ep)
@@ -83,7 +84,7 @@ class WhisperHandler (whisper_grpc.WhisperBase):
         as_completed = asyncio.as_completed(tasks)
         for task in as_completed: 
             try:
-                self.logger.info(f"Successfully transcribed this episode: {await task}")
+                self._logger.info(f"Successfully transcribed this episode: {await task}")
             except Exception as e:
-                self.logger.error(f"Failed")
+                self._logger.error(f"Failed")
         return

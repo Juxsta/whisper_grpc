@@ -21,18 +21,14 @@ References:
 """
 
 import argparse
-import logging
 import sys
 import os
 import asyncio
 from whisper_grpc import __version__
-from .grpc_server import serve_grpc
-from .rest_server import serve_rest
+from .grpc.grpc_server import serve_grpc
+from .rest.rest_server import serve_rest
+from .utils.logging_config import *
 
-logging.basicConfig(
-    format="[%(asctime)s] %(levelname)s:%(name)s:%(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
-)
 
 _logger = logging.getLogger(__name__)
 __author__ = "Juxsta"
@@ -57,8 +53,7 @@ def checkTruthy(string:str or None):
         pass
     return False
 
-verbose = checkTruthy(os.getenv("VERBOSE"))
-very_verbose = checkTruthy(os.getenv("VERY_VERBOSE"))
+
 host = os.getenv("HOST")
 grpc_port = int(os.getenv("GRPC_PORT")) if os.getenv("GRPC_PORT") else None
 rest_port = int(os.getenv("REST_PORT")) if os.getenv("REST_PORT") else None
