@@ -1,7 +1,7 @@
 import logging
 from grpclib.utils import graceful_exit
 from grpclib.server import Server
-from .service import WhisperHandler
+from ..service import WhisperHandler
 
 async def serve_grpc(host, port):
     server = Server([WhisperHandler()])
