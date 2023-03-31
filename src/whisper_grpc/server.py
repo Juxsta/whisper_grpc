@@ -28,7 +28,9 @@ from whisper_grpc import __version__
 from .grpc.grpc_server import serve_grpc
 from .rest.rest_server import serve_rest
 from .utils.logging_config import *
+from dotenv import load_dotenv
 
+load_dotenv()
 
 _logger = logging.getLogger(__name__)
 __author__ = "Juxsta"

@@ -8,6 +8,7 @@ from pyannote.audio import Inference
 import ffmpeg
 import whisperx
 from whisperx.utils import write_srt
+import pysubs2
 
 hf_token = os.getenv("HF_TOKEN")
 device = 'cuda'
@@ -53,7 +54,60 @@ def transcribe(whisper_model: whisperx.Whisper, audio_rip_path: str, _logger: lo
             audio_rip_path, beam_size=5, best_of=5, language="en", verbose=False)
 
     # Refactor the above code to remove the duplication
+    
+def merge_subtitles(whisper_subtitles, forced_subs_path):
+    subs = pysubs2.load(forced_subs_path, encoding="utf-8")
 
+    for transcription in whisper_subtitles:
+        start_time = pysubs2.make_time(s=transcription["start_time"])
+        end_time = pysubs2.make_time(s=transcription["end_time"])
+        text = transcription["text"]
+
+        new_event = pysubs2.SSAEvent(start=start_time, end=end_time, text=text)
+        subs.insert(new_event)
+
+    subs.sort()
+    return subs
+
+def extract_forced_subtitles(video_file: str, output_path: str):
+    # Get subtitle stream information using ffprobe
+    command = [
+        "ffprobe",
+        "-v", "error",
+        "-select_streams", "s",
+        "-show_entries", "stream=index:stream_tags=language:stream_disposition=forced",
+        "-of", "csv=p=0",
+        video_file
+    ]
+    output = subprocess.check_output(command, universal_newlines=True).strip().splitlines()
+    subtitle_streams = [line.split(',') for line in output]
+
+    # Find the first forced English subtitle stream
+    forced_stream_index = None
+    for stream in subtitle_streams:
+        index, language, forced = stream
+        if language.lower() == "eng" and forced == "1":
+            forced_stream_index = index
+            break
+
+    if forced_stream_index is None:
+        return False
+
+    # Extract the forced English subtitle stream using ffmpeg
+    command = [
+        "ffmpeg",
+        "-i", video_file,
+        "-map", f"0:s:{forced_stream_index}",
+        "-c:s", "copy",
+        "-vn", "-an",
+        "-f", "ass",
+        output_path
+    ]
+    try:
+        subprocess.run(command, check=True)
+        return True
+    except subprocess.CalledProcessError:
+        return False
 
 def transcribe_file(file: str, model: str):
     _logger = logging.getLogger(__name__)
@@ -87,7 +141,20 @@ def transcribe_file(file: str, model: str):
             _logger.error(
                 f'No English audio track found in {file}, error: {e.stderr}')
             raise ValueError(f'No English audio track found in {file}')
+    
+    # Extract forced subtitles if they exist
+    forced_subs_path = None
+    with tempfile.NamedTemporaryFile(suffix=".ass") as forced_subs_temp:
+        if extract_forced_subtitles(file, forced_subs_temp.name):
+            forced_subs_path = forced_subs_temp.name
+            forced_subs_temp.flush()
+
     # Write the results to the output file
-    save_results(result_aligned, output_path)
+    if forced_subs_path:
+        subs = merge_subtitles(result_aligned["segments"], forced_subs_path)
+        subs.save(output_path.as_posix())
+    else:
+        save_results(result_aligned, output_path)
+
     return f"Transcribed {file} to {output_path}"
 
