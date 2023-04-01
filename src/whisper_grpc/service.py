@@ -3,8 +3,8 @@ import concurrent.futures
 from .utils.logging_config import *
 
 import os
-import whisper_grpc.grpc.proto.whisper_grpc as whisper_grpc
-from whisper_grpc.grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubResponse
+import whisper_grpc.proto.whisper_grpc as whisper_grpc
+from whisper_grpc.proto.whisper_pb2 import LocalTranscribeAnimeDubResponse
 from .utils.common import MODEL_MAP
 from whisper_grpc.client.client_plex import ClientPlexServer
 from .transcribe import transcribe_file

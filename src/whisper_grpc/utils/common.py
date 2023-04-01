@@ -1,4 +1,4 @@
-from whisper_grpc.grpc.proto.whisper_pb2 import Model
+from whisper_grpc.proto.whisper_pb2 import Model
 
 MODEL_MAP = {
     Model.TINY: "tiny",
