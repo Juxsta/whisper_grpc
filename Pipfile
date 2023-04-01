@@ -15,6 +15,7 @@ whisper-grpc = {editable = true, path = "."}
 flask = "*"
 pysubs2 = "*"
 python-dotenv = "*"
+gevent = "*"
 
 [dev-packages]
 tox = "*"

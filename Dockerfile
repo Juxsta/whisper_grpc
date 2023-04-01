@@ -9,7 +9,7 @@ ENV HOST=127.0.0.1
 ENV PORT=50051
 ENV HF_TOKEN=your-huggingface-token
 # Copy the Pipfile and Pipfile.lock into the container
-RUN apt-get update && apt-get install -y libmagic-dev ffmpeg
+RUN apt-get update && apt-get install -y libmagic-dev ffmpeg libsndfile1
 RUN python -m pip install --upgrade pip
 COPY . .
 

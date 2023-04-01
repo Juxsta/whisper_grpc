@@ -21,14 +21,18 @@ References:
 """
 
 import argparse
-import sys
-import os
 import asyncio
+import logging
+import os
+import signal
+import sys
+from threading import Thread
 from whisper_grpc import __version__
-from .grpc.grpc_server import serve_grpc
-from .rest.rest_server import serve_rest
-from .utils.logging_config import *
+from whisper_grpc.grpc.grpc_server import serve_grpc
+from whisper_grpc.rest.rest_server import serve_rest
+from whisper_grpc.utils.logging_config import *
 from dotenv import load_dotenv
+
 
 load_dotenv()
 
@@ -39,13 +43,20 @@ __license__ = "MIT"
 
 logging.basicConfig(
     format="[%(asctime)s] %(levelname)s:%(name)s:%(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
+    datefmt="%Y-%m-%d %H:%M:%S",
 )
 
 _logger = logging.getLogger(__name__)
 
+verbose = os.getenv("VERBOSE")
+very_verbose = os.getenv("VERY_VERBOSE")
+grpc_host = os.getenv("HOST", "127.0.0.1")
+grpc_port = int(os.getenv("GRPC_PORT", "50051"))
+rest_host = os.getenv("HOST", "127.0.0.1")
+rest_port = int(os.getenv("REST_PORT", "50052"))
 
-def checkTruthy(string:str or None):
+
+def checkTruthy(string: str or None):
     try:
         if string.lower() == "true":
             return True
@@ -56,13 +67,7 @@ def checkTruthy(string:str or None):
     return False
 
 
-host = os.getenv("HOST")
-grpc_port = int(os.getenv("GRPC_PORT")) if os.getenv("GRPC_PORT") else None
-rest_port = int(os.getenv("REST_PORT")) if os.getenv("REST_PORT") else None
 # ---- CLI ----
-# The functions defined in this section are wrappers around the main Python
-# API allowing them to be called directly from the terminal as a CLI
-# executable/script.
 
 
 def parse_args(args):
@@ -91,6 +96,7 @@ def parse_args(args):
     return parser.parse_args(args)
 
 
+
 def setup_logging(args):
     """Setup basic logging
 
@@ -99,11 +105,19 @@ def setup_logging(args):
     """
     if args.very_verbose or very_verbose:
         _logger.setLevel(logging.DEBUG)
-        
+
     elif args.verbose or verbose:
         _logger.setLevel(logging.INFO)
     else:
         _logger.setLevel(logging.WARNING)
+
+
+async def shutdown():
+    _logger.info("Received shutdown signal. Closing servers...")
+    await asyncio.gather(
+        grpc_server.stop(0),
+        loop.run_in_executor(None, http_server.stop)
+    )
 
 
 async def main(args):
@@ -120,34 +134,44 @@ async def main(args):
     setup_logging(args)
     _logger.debug("Starting servers...")
 
-    grpc_host, grpc_port = args.host, args.grpc_port
-    rest_host, rest_port = args.host, args.rest_port
+    global loop, grpc_server, http_server
+    loop = asyncio.get_running_loop()
+    grpc_server = serve_grpc(args.host, args.grpc_port)
+    http_server = Thread(target=serve_rest, args=(args.host, args.rest_port), daemon=True)
+    http_server.start()
 
-    grpc_server = serve_grpc(grpc_host, grpc_port)
-    rest_server = asyncio.to_thread(serve_rest, rest_host, rest_port)
+    _logger.info(f"GRPC server started at {args.host}:{args.grpc_port}")
+    _logger.info(f"REST server started at {args.host}:{args.rest_port}")
 
-    await asyncio.gather(grpc_server, rest_server)
+    try:
+        # Use a low level API to handle signals properly
+        loop.add_signal_handler(signal.SIGINT, lambda: asyncio.create_task(shutdown()))
+        loop.add_signal_handler(signal.SIGTERM, lambda: asyncio.create_task(shutdown()))
+    except NotImplementedError:
+        # Windows platform raises an exception when signals are not implemented
+        pass
 
-    _logger.info("Servers end here")
+    await grpc_server
 
-
+    _logger.info("Servers ended")
+    
 def run():
     """Calls :func:`main` passing the CLI arguments extracted from :obj:`sys.argv`
 
     This function can be used as entry point to create console scripts with setuptools.
     """
-    asyncio.run(main(sys.argv[1:]))
+    args = parse_args(sys.argv[1:])
+    setup_logging(args)
 
+    _logger.debug("Starting servers...")
+    _logger.debug(f"GRPC server running on {args.host}:{args.grpc_port}")
+    _logger.debug(f"REST server running on {args.host}:{args.rest_port}")
 
-if __name__ == "__main__":
-    # ^  This is a guard statement that will prevent the following code from
-    #    being executed in the case someone imports this file instead of
-    #    executing it as a script.
-    #    https://docs.python.org/3/library/__main__.html
+    loop = asyncio.get_event_loop()
+    try:
+        loop.run_until_complete(main(sys.argv[1:]))
+    except KeyboardInterrupt:
+        pass
+    finally:
+        loop.close()
 
-    # After installing your project with pip, users can also run your Python
-    # modules as scripts via the ``-m`` flag, as defined in PEP 338::
-    #
-    #     python -m whisper.main
-    #
-    run()
