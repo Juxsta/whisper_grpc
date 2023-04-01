@@ -13,6 +13,9 @@ python-magic = "*"
 whisper-grpc = {editable = true, path = "."}
 "pyannote.audio" = "==0.0.1"
 flask = "*"
+pysubs2 = "*"
+python-dotenv = "*"
+gevent = "*"
 
 [dev-packages]
 tox = "*"
@@ -21,7 +24,6 @@ grpcio-tools = "*"
 grpcio = "*"
 pytest = "*"
 pytest-cov = "*"
-pytest-dotenv = "*"
 
 [requires]
 python_version = "3.9"
