@@ -38,7 +38,7 @@ whisper_grpc
 
 How to compile protos
 https://github.com/vmagamedov/grpclib
-python3 -m grpc_tools.protoc -I. --python_out=. --grpclib_python_out=. --pyi_out=. whisper_grpc/grpc/proto/whisper.proto 
+python3 -m grpc_tools.protoc -I. -I../third_party/googleapis --python_out=.  --experimental_allow_proto3_optional --grpclib_python_out=. --pyi_out=. --grpc-gateway_out=logtostderr=true:. whisper_grpc/proto/whisper.proto
 
 
 .. _pyscaffold-notes:

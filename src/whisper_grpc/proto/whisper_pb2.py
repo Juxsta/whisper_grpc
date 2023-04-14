@@ -11,21 +11,25 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n whisper_grpc/proto/whisper.proto\"\x9b\x01\n\x1eLocalTranscribeAnimeDubRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04show\x18\x02 \x01(\t\x12\x0e\n\x06season\x18\x03 \x01(\t\x12\x0f\n\x07\x65pisode\x18\x04 \x01(\t\x12\x15\n\x05model\x18\x05 \x01(\x0e\x32\x06.Model\x12\x16\n\tmax_after\x18\x06 \x01(\x05H\x00\x88\x01\x01\x42\x0c\n\n_max_after\"/\n\x1fLocalTranscribeAnimeDubResponse\x12\x0c\n\x04text\x18\x01 \x01(\t*\x82\x01\n\x05Model\x12\x08\n\x04TINY\x10\x00\x12\x08\n\x04\x42\x41SE\x10\x01\x12\t\n\x05SMALL\x10\x02\x12\n\n\x06MEDIUM\x10\x03\x12\t\n\x05LARGE\x10\x04\x12\x0c\n\x08LARGE_V2\x10\x05\x12\x0b\n\x07TINY_EN\x10\x06\x12\x0b\n\x07\x42\x41SE_EN\x10\x07\x12\x0c\n\x08SMALL_EN\x10\x08\x12\r\n\tMEDIUM_EN\x10\t2i\n\x07Whisper\x12^\n\x17LocalTranscribeAnimeDub\x12\x1f.LocalTranscribeAnimeDubRequest\x1a .LocalTranscribeAnimeDubResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n whisper_grpc/proto/whisper.proto\x1a\x1cgoogle/api/annotations.proto\"\x9b\x01\n\x1eLocalTranscribeAnimeDubRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04show\x18\x02 \x01(\t\x12\x0e\n\x06season\x18\x03 \x01(\t\x12\x0f\n\x07\x65pisode\x18\x04 \x01(\t\x12\x15\n\x05model\x18\x05 \x01(\x0e\x32\x06.Model\x12\x16\n\tmax_after\x18\x06 \x01(\x05H\x00\x88\x01\x01\x42\x0c\n\n_max_after\"/\n\x1fLocalTranscribeAnimeDubResponse\x12\x0c\n\x04text\x18\x01 \x01(\t*\x82\x01\n\x05Model\x12\x08\n\x04TINY\x10\x00\x12\x08\n\x04\x42\x41SE\x10\x01\x12\t\n\x05SMALL\x10\x02\x12\n\n\x06MEDIUM\x10\x03\x12\t\n\x05LARGE\x10\x04\x12\x0c\n\x08LARGE_V2\x10\x05\x12\x0b\n\x07TINY_EN\x10\x06\x12\x0b\n\x07\x42\x41SE_EN\x10\x07\x12\x0c\n\x08SMALL_EN\x10\x08\x12\r\n\tMEDIUM_EN\x10\t2\x97\x01\n\x07Whisper\x12\x8b\x01\n\x17LocalTranscribeAnimeDub\x12\x1f.LocalTranscribeAnimeDubRequest\x1a .LocalTranscribeAnimeDubResponse\"-\x82\xd3\xe4\x93\x02\'\"\"/api/v1/local_transcribe_anime_dub:\x01*B\x1eZ\x1c./whisper_grpc/proto;whisperb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'whisper_grpc.proto.whisper_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _MODEL._serialized_start=244
-  _MODEL._serialized_end=374
-  _LOCALTRANSCRIBEANIMEDUBREQUEST._serialized_start=37
-  _LOCALTRANSCRIBEANIMEDUBREQUEST._serialized_end=192
-  _LOCALTRANSCRIBEANIMEDUBRESPONSE._serialized_start=194
-  _LOCALTRANSCRIBEANIMEDUBRESPONSE._serialized_end=241
-  _WHISPER._serialized_start=376
-  _WHISPER._serialized_end=481
+  DESCRIPTOR._serialized_options = b'Z\034./whisper_grpc/proto;whisper'
+  _WHISPER.methods_by_name['LocalTranscribeAnimeDub']._options = None
+  _WHISPER.methods_by_name['LocalTranscribeAnimeDub']._serialized_options = b'\202\323\344\223\002\'\"\"/api/v1/local_transcribe_anime_dub:\001*'
+  _MODEL._serialized_start=274
+  _MODEL._serialized_end=404
+  _LOCALTRANSCRIBEANIMEDUBREQUEST._serialized_start=67
+  _LOCALTRANSCRIBEANIMEDUBREQUEST._serialized_end=222
+  _LOCALTRANSCRIBEANIMEDUBRESPONSE._serialized_start=224
+  _LOCALTRANSCRIBEANIMEDUBRESPONSE._serialized_end=271
+  _WHISPER._serialized_start=407
+  _WHISPER._serialized_end=558
 # @@protoc_insertion_point(module_scope)

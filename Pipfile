@@ -16,6 +16,7 @@ flask = "*"
 pysubs2 = "*"
 python-dotenv = "*"
 gevent = "*"
+grpc-gateway-protoc-gen-openapiv2 = "*"
 
 [dev-packages]
 tox = "*"
@@ -24,6 +25,8 @@ grpcio-tools = "*"
 grpcio = "*"
 pytest = "*"
 pytest-cov = "*"
+googleapis-common-protos = "*"
+grpc-gateway-protoc-gen-openapiv2 = "*"
 
 [requires]
 python_version = "3.9"

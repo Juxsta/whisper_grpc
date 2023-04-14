@@ -39,7 +39,7 @@ def validate_file(file: str):
     return True
 
 
-def transcribe(whisper_model: whisperx.Whisper, audio_rip_path: str, _logger: logging.Logger):
+def transcribe(whisper_model: whisperx, audio_rip_path: str, _logger: logging.Logger):
     try:
         _logger.info("Attempting VAD")
         if not hf_token:

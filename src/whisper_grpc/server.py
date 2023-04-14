@@ -29,6 +29,12 @@ import asyncio
 from .utils.logging_config import *
 from dotenv import load_dotenv
 
+# gRPC-Gateway dependencies
+import grpc
+from grpc_reflection.v1alpha import reflection
+from grpc_health.v1 import health_pb2, health_pb2_grpc, health
+from .proto import whisper_pb2, whisper_pb2_grpc
+
 load_dotenv()
 
 __author__ = "Juxsta"
@@ -115,12 +121,32 @@ async def main(args):
     from .service import WhisperHandler
     from grpclib.utils import graceful_exit
     from grpclib.server import Server
-    server = Server([WhisperHandler()])
-    with graceful_exit([server]):
-        await server.start(host, port)
+    grpc_server = Server([WhisperHandler()])
+
+    # gRPC-Gateway setup
+    grpc_gateway = grpc.server(asyncio.get_event_loop())
+    whisper_pb2_grpc.add_WhisperServicer_to_server(WhisperHandler(), grpc_gateway)
+    health_pb2_grpc.add_HealthServicer_to_server(health.HealthServicer(), grpc_gateway)
+    SERVICE_NAMES = (
+        whisper_pb2.DESCRIPTOR.services_by_name['Whisper'].full_name,
+        health_pb2.DESCRIPTOR.services_by_name['Health'].full_name,
+        reflection.SERVICE_NAME,
+    )
+    reflection.enable_server_reflection(SERVICE_NAMES, grpc_gateway)
+
+    with graceful_exit([grpc_server]):
+        await grpc_server.start(host, port)
         _logger.info('Whisper gRPC server started on %s:%d', host, port)
-        await server.wait_closed()
+
+        grpc_gateway.add_insecure_port(f'{host}:{50052}')
+        grpc_gateway.start()
+        _logger.info('Whisper gRPC-Gateway server started on %s:%d', host, 50052)
+
+        await grpc_server.wait_closed()
         _logger.info('Whisper gRPC server gracefully shutting down')
+        grpc_gateway.stop(None)
+        _logger.info('Whisper gRPC-Gateway server gracefully shutting down')
+
     _logger.info("Whisper gRPC server stopped")
 
 

@@ -1,7 +1,14 @@
 syntax = "proto3";
+option go_package = "./whisper_grpc/proto;whisper";
+import "google/api/annotations.proto";
 
 service Whisper {
-    rpc LocalTranscribeAnimeDub (LocalTranscribeAnimeDubRequest) returns (LocalTranscribeAnimeDubResponse) {}
+    rpc LocalTranscribeAnimeDub (LocalTranscribeAnimeDubRequest) returns (LocalTranscribeAnimeDubResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/local_transcribe_anime_dub"
+            body: "*"
+        };
+    }
 }
 // set enum for model of local transcribe request: tiny.en 
 

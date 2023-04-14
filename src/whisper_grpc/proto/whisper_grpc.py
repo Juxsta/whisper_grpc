@@ -9,6 +9,7 @@ import grpclib.client
 if typing.TYPE_CHECKING:
     import grpclib.server
 
+import google.api.annotations_pb2
 import whisper_grpc.proto.whisper_pb2
 
 

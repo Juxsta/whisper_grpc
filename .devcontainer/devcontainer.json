@@ -29,13 +29,19 @@
 	],
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
+		"ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {
+			"fisher": true
+		},
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "latest"
+		},
 	},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "root",
 	// run a command on startup
-	"postCreateCommand": "pip install -e .[testing]",
+	"postCreateCommand": "sudo apt update && sudo apt install -y protobuf-compiler libsndfile1 && pip install -e .[testing] && go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@latest github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@latest",
 	"mounts": [
 		"source=/mnt/user/media/tv/Assassination Classroom,target=/mnt/user/media/tv/Assassination Classroom,type=bind,consistency=cached"
 	]
+
 }
